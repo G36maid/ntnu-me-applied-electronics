@@ -1,6 +1,7 @@
 # Ch3 二極體 (Diodes)
 
 ---
+
 **📄 Slide 01**
 
 ![Ch3_Diodes Slide 01](assets/Ch3_Diodes/slide-01.png)
@@ -8,6 +9,7 @@
 ## 第 3 章 二極體 (Chapter 3 Diodes)
 
 ---
+
 **📄 Slide 02**
 
 ![Ch3_Diodes Slide 02](assets/Ch3_Diodes/slide-02.png)
@@ -19,6 +21,7 @@
 *   n 區稱為**陰極 (cathode)**，並連接到第二個導電端子。
 
 ---
+
 **📄 Slide 03**
 
 ![Ch3_Diodes Slide 03](assets/Ch3_Diodes/slide-03.png)
@@ -29,6 +32,7 @@
 *   表面黏著式 (Surface mount)
 
 ---
+
 **📄 Slide 04**
 
 ![Ch3_Diodes Slide 04](assets/Ch3_Diodes/slide-04.png)
@@ -43,6 +47,7 @@
     $$V_{BIAS} > V_{Barrier\ potential}$$
 
 ---
+
 **📄 Slide 05**
 
 ![Ch3_Diodes Slide 05](assets/Ch3_Diodes/slide-05.png)
@@ -57,6 +62,7 @@
     $$V_{BIAS} > V_{BARRIER}$$
 
 ---
+
 **📄 Slide 06**
 
 ![Ch3_Diodes Slide 06](assets/Ch3_Diodes/slide-06.png)
@@ -73,6 +79,7 @@
     *   可能會產生極小的漏電流 (Current may leak extremely small)。
 
 ---
+
 **📄 Slide 07**
 
 ![Ch3_Diodes Slide 07](assets/Ch3_Diodes/slide-07.png)
@@ -85,6 +92,7 @@
 *   當順向電壓達到並保持在 $0.7\text{ V}$ 時，順向電流會隨著偏壓的增加而增加。
 
 ---
+
 **📄 Slide 08**
 
 ![Ch3_Diodes Slide 08](assets/Ch3_Diodes/slide-08.png)
@@ -95,6 +103,7 @@
 *   *(圖中標示：低電阻 Low resistance、高電阻 High resistance)*
 
 ---
+
 **📄 Slide 09**
 
 ![Ch3_Diodes Slide 09](assets/Ch3_Diodes/slide-09.png)
@@ -107,6 +116,7 @@
     *   $\rightarrow$ 在超過崩潰點後，二極體通常已經損壞。
 
 ---
+
 **📄 Slide 10**
 
 ![Ch3_Diodes Slide 10](assets/Ch3_Diodes/slide-10.png)
@@ -117,6 +127,7 @@
 *   在較高的溫度下，障壁電位會降低 (At higher temp., the barrier potential is decreased)。
 
 ---
+
 **📄 Slide 11**
 
 ![Ch3_Diodes Slide 11](assets/Ch3_Diodes/slide-11.png)
@@ -131,6 +142,7 @@
     3.  **完整模型 (Complete model)**
 
 ---
+
 **📄 Slide 12**
 
 ![Ch3_Diodes Slide 12](assets/Ch3_Diodes/slide-12.png)
@@ -142,6 +154,7 @@
 *   當二極體處於逆向偏壓時，理想情況下它就像一個**斷開的（關閉的）開關** (open/off switch)。
 
 ---
+
 **📄 Slide 13**
 
 ![Ch3_Diodes Slide 13](assets/Ch3_Diodes/slide-13.png)
@@ -155,6 +168,7 @@
     $$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0\ \text{V} = 10\ \text{V}$$
 
 ---
+
 **📄 Slide 14**
 
 ![Ch3_Diodes Slide 14](assets/Ch3_Diodes/slide-14.png)
@@ -168,6 +182,7 @@
     $$V_{LIMIT} = 0\ \text{V}$$
 
 ---
+
 **📄 Slide 15**
 
 ![Ch3_Diodes Slide 15](assets/Ch3_Diodes/slide-15.png)
@@ -179,6 +194,7 @@
 *   當二極體處於逆向偏壓時，它和理想模型一樣是一個斷開的開關。
 
 ---
+
 **📄 Slide 16**
 
 ![Ch3_Diodes Slide 16](assets/Ch3_Diodes/slide-16.png)
@@ -192,6 +208,7 @@
     $$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$$
 
 ---
+
 **📄 Slide 17**
 
 ![Ch3_Diodes Slide 17](assets/Ch3_Diodes/slide-17.png)
@@ -205,6 +222,7 @@
     $$V_{LIMIT} = 0\ \text{V}$$
 
 ---
+
 **📄 Slide 18**
 
 ![Ch3_Diodes Slide 18](assets/Ch3_Diodes/slide-18.png)
@@ -214,6 +232,7 @@
 *   二極體的**完整模型**是最精確的近似方式，它包含了障壁電位、微小的順向動態電阻 ($r'_d$) 以及極大的內部逆向電阻 ($r'_R$)。
 
 ---
+
 **📄 Slide 19**
 
 ![Ch3_Diodes Slide 19](assets/Ch3_Diodes/slide-19.png)
@@ -227,6 +246,7 @@
     $$V_{LIMIT} = I_F R_{LIMIT} = (9.21\ \text{mA})(1\ \text{k}\Omega) = 9.21\ \text{V}$$
 
 ---
+
 **📄 Slide 20**
 
 ![Ch3_Diodes Slide 20](assets/Ch3_Diodes/slide-20.png)

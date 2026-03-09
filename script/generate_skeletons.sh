@@ -52,6 +52,7 @@ for target_dir in "$ASSETS_DIR"/*; do
         # 附加到 Markdown 檔案
                 cat <<EOF >> "$md_filepath"
 ---
+
 **📄 Slide $page_str**
 
 ![$dirname Slide $page_str](assets/$dirname/$img_name)

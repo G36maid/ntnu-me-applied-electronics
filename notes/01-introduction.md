@@ -1,6 +1,7 @@
 # Ch1 簡介 (Introduction)
 
 ---
+
 **📄 Slide 01**
 
 ![Ch1_Introduction Slide 01](assets/Ch1_Introduction/slide-01.png)
@@ -8,6 +9,7 @@
 ## 第 1 章 簡介 (Chapter 1 Introduction)
 
 ---
+
 **📄 Slide 02**
 
 ![Ch1_Introduction Slide 02](assets/Ch1_Introduction/slide-02.png)
@@ -25,6 +27,7 @@
 *   **語言**：中文講述、英文教材
 
 ---
+
 **📄 Slide 03**
 
 ![Ch1_Introduction Slide 03](assets/Ch1_Introduction/slide-03.png)
@@ -39,6 +42,7 @@
 *   本課程同時也將介紹上述元件之應用。
 
 ---
+
 **📄 Slide 04**
 
 ![Ch1_Introduction Slide 04](assets/Ch1_Introduction/slide-04.png)
@@ -54,6 +58,7 @@ flowchart LR
 ```
 
 ---
+
 **📄 Slide 05**
 
 ![Ch1_Introduction Slide 05](assets/Ch1_Introduction/slide-05.png)
@@ -88,6 +93,7 @@ flowchart LR
 | 16 | 6/8 | **期末考 (Final exam)** |
 
 ---
+
 **📄 Slide 06**
 
 ![Ch1_Introduction Slide 06](assets/Ch1_Introduction/slide-06.png)
@@ -99,6 +105,7 @@ flowchart LR
 *   遲到**超過** 20 分鐘 $\rightarrow$ **蹺課**
 
 ---
+
 **📄 Slide 07**
 
 ![Ch1_Introduction Slide 07](assets/Ch1_Introduction/slide-07.png)
@@ -110,6 +117,7 @@ flowchart LR
 *   Adel S. Sedra, Kenneth C. Smith, *Microelectronic Circuits*, 7/e, Oxford University Press, 2015.
 
 ---
+
 **📄 Slide 08**
 
 ![Ch1_Introduction Slide 08](assets/Ch1_Introduction/slide-08.png)
@@ -120,6 +128,7 @@ flowchart LR
 *   Adel A. Sedra, et al. 著，《微電子學(上下冊)》，2022~2023 年。
 
 ---
+
 **📄 Slide 09**
 
 ![Ch1_Introduction Slide 09](assets/Ch1_Introduction/slide-09.png)
@@ -133,6 +142,7 @@ flowchart LR
 *   同時，本課程（《應用電子學》）將帶您探索**主動元件**，例如：二極體 (diodes)、發光二極體 (LEDs)、電晶體 (transistors) 和運算放大器 (Op-Amp) 及其應用。
 
 ---
+
 **📄 Slide 10**
 
 ![Ch1_Introduction Slide 10](assets/Ch1_Introduction/slide-10.png)
@@ -143,6 +153,7 @@ flowchart LR
 *   **應用電子學**：主要探討由半導體構成的主動元件（如 IC、電晶體等）及其應用電路。
 
 ---
+
 **📄 Slide 11**
 
 ![Ch1_Introduction Slide 11](assets/Ch1_Introduction/slide-11.png)
@@ -153,6 +164,7 @@ flowchart LR
     *   **交流-直流轉換器 (AC-DC Converter / 整流器)** 或 **直流電源供應器 (DC Power supply)**
 
 ---
+
 **📄 Slide 12**
 
 ![Ch1_Introduction Slide 12](assets/Ch1_Introduction/slide-12.png)
@@ -163,6 +175,7 @@ flowchart LR
     *   **直流-交流逆變器 (DC-AC Inverter)**
 
 ---
+
 **📄 Slide 13**
 
 ![Ch1_Introduction Slide 13](assets/Ch1_Introduction/slide-13.png)
@@ -173,6 +186,7 @@ flowchart LR
     *   **振盪器 (Oscillator)**
 
 ---
+
 **📄 Slide 14**
 
 ![Ch1_Introduction Slide 14](assets/Ch1_Introduction/slide-14.png)
@@ -183,6 +197,7 @@ flowchart LR
     *   **雜訊濾波器 (Noise filtering)**
 
 ---
+
 **📄 Slide 15**
 
 ![Ch1_Introduction Slide 15](assets/Ch1_Introduction/slide-15.png)
@@ -193,6 +208,7 @@ flowchart LR
     *   **溫度轉電壓轉換器 (Temperature to Voltage conversion)**，可用於維持或監控溫度。
 
 ---
+
 **📄 Slide 16**
 
 ![Ch1_Introduction Slide 16](assets/Ch1_Introduction/slide-16.png)
@@ -210,6 +226,7 @@ flowchart LR
     *   電感 (Inductor): $$v = L \frac{di}{dt}$$
 
 ---
+
 **📄 Slide 17**
 
 ![Ch1_Introduction Slide 17](assets/Ch1_Introduction/slide-17.png)
@@ -219,6 +236,7 @@ flowchart LR
 *(此頁同 Slide 05，再次重申評分標準與課程進度規劃。)*
 
 ---
+
 **📄 Slide 18**
 
 ![Ch1_Introduction Slide 18](assets/Ch1_Introduction/slide-18.png)

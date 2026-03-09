@@ -1,6 +1,7 @@
 # Ch4 二極體應用 (Diode Applications)
 
 ---
+
 **📄 Slide 01**
 
 ![Ch4_Diode_Applications Slide 01](assets/Ch4_Diode_Applications/slide-01.png)
@@ -8,6 +9,7 @@
 ## 第 4 章 二極體應用 (Chapter 4 Applications of Diodes)
 
 ---
+
 **📄 Slide 02**
 
 ![Ch4_Diode_Applications Slide 02](assets/Ch4_Diode_Applications/slide-02.png)
@@ -19,6 +21,7 @@
 *   常見應用範例：手機/筆記型電腦充電器、電視、個人電腦、揚聲器等。
 
 ---
+
 **📄 Slide 03**
 
 ![Ch4_Diode_Applications Slide 03](assets/Ch4_Diode_Applications/slide-03.png)
@@ -42,6 +45,7 @@ flowchart LR
 ```
 
 ---
+
 **📄 Slide 04**
 
 ![Ch4_Diode_Applications Slide 04](assets/Ch4_Diode_Applications/slide-04.png)
@@ -56,6 +60,7 @@ flowchart LR
     *   $n > 1$：升壓變壓器
 
 ---
+
 **📄 Slide 05**
 
 ![Ch4_Diode_Applications Slide 05](assets/Ch4_Diode_Applications/slide-05.png)
@@ -67,6 +72,7 @@ flowchart LR
 *   **逆向偏壓 (Reverse bias)**：當輸入電壓在週期的後半段變為負值時，二極體處於逆向偏壓，阻斷電流。
 
 ---
+
 **📄 Slide 06**
 
 ![Ch4_Diode_Applications Slide 06](assets/Ch4_Diode_Applications/slide-06.png)
@@ -82,6 +88,7 @@ flowchart LR
     $$V_{rms} = \sqrt{\frac{1}{T} \int_0^T v(t)^2 dt}$$
 
 ---
+
 **📄 Slide 07**
 
 ![Ch4_Diode_Applications Slide 07](assets/Ch4_Diode_Applications/slide-07.png)
@@ -97,6 +104,7 @@ $$V_{AVG} = \frac{V_p}{\pi}$$
 $$V_{AVG} \cong 31.8\% V_p$$
 
 ---
+
 **📄 Slide 08**
 
 ![Ch4_Diode_Applications Slide 08](assets/Ch4_Diode_Applications/slide-08.png)
@@ -112,6 +120,7 @@ $$V_{RMS}^2 = \frac{V_p^2}{4\pi} \left[ t - \frac{\sin(2t)}{2} \right]_0^\pi = \
 $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 
 ---
+
 **📄 Slide 09**
 
 ![Ch4_Diode_Applications Slide 09](assets/Ch4_Diode_Applications/slide-09.png)
@@ -123,6 +132,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   然而，除非另有說明，否則我們將使用**實用模型**，將 $0.7\text{ V}$ 的障礙電位納入考量。
 
 ---
+
 **📄 Slide 10**
 
 ![Ch4_Diode_Applications Slide 10](assets/Ch4_Diode_Applications/slide-10.png)
@@ -135,6 +145,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
     $$V_{p(out)} = V_{p(in)} - 0.7\text{ V} = 10\text{ V} - 0.7\text{ V} = 9.3\text{ V}$$
 
 ---
+
 **📄 Slide 11**
 
 ![Ch4_Diode_Applications Slide 11](assets/Ch4_Diode_Applications/slide-11.png)
@@ -145,6 +156,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   *(給定的輸入電壓為 $V_{in}$，峰值為 $+1.5\text{V}$ 與 $-1.5\text{V}$)*
 
 ---
+
 **📄 Slide 12**
 
 ![Ch4_Diode_Applications Slide 12](assets/Ch4_Diode_Applications/slide-12.png)
@@ -157,6 +169,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
     $$V_{BR} \ge 1.2 \times \text{PIV}$$
 
 ---
+
 **📄 Slide 13**
 
 ![Ch4_Diode_Applications Slide 13](assets/Ch4_Diode_Applications/slide-13.png)
@@ -169,6 +182,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
     2.  交流電源與整流器在電路上**隔絕 (electrically isolated)**，從而**避免二次側電路發生電擊危險 (preventing a shock hazard)**。
 
 ---
+
 **📄 Slide 14**
 
 ![Ch4_Diode_Applications Slide 14](assets/Ch4_Diode_Applications/slide-14.png)
@@ -179,6 +193,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **題目**：如果要購買此電路使用的二極體，其崩潰電壓 (breakdown voltage) 應該是多少？
 
 ---
+
 **📄 Slide 15**
 
 ![Ch4_Diode_Applications Slide 15](assets/Ch4_Diode_Applications/slide-15.png)
@@ -189,6 +204,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **思考**：相對於峰值電壓 $V_p$，全波整流電壓的平均值是多少？
 
 ---
+
 **📄 Slide 16**
 
 ![Ch4_Diode_Applications Slide 16](assets/Ch4_Diode_Applications/slide-16.png)
@@ -199,6 +215,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   輸入電壓透過變壓器耦合到中心抽頭的二次側。總二次側電壓的一半會出現在中心抽頭與二次繞組各端之間。
 
 ---
+
 **📄 Slide 17**
 
 ![Ch4_Diode_Applications Slide 17](assets/Ch4_Diode_Applications/slide-17.png)
@@ -209,6 +226,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **負半週**：在輸入電壓的負半週，二極體 $D_1$ 處於逆向偏壓，而二極體 $D_2$ 處於順向偏壓。電流路徑通過 $D_2$ 及負載電阻 $R_L$。
 
 ---
+
 **📄 Slide 18**
 
 ![Ch4_Diode_Applications Slide 18](assets/Ch4_Diode_Applications/slide-18.png)
@@ -219,6 +237,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **題目**：二極體必須具備的最小 PIV 額定值是多少？
 
 ---
+
 **📄 Slide 19**
 
 ![Ch4_Diode_Applications Slide 19](assets/Ch4_Diode_Applications/slide-19.png)
@@ -230,6 +249,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **負半週**：當輸入週期為負時，二極體 $D_3$ 和 $D_4$ 處於順向偏壓，並在後半週期內導電。
 
 ---
+
 **📄 Slide 20**
 
 ![Ch4_Diode_Applications Slide 20](assets/Ch4_Diode_Applications/slide-20.png)
@@ -239,6 +259,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **題目**：對於一次側兩端為標準的 $120\text{ V}$ 電壓，變壓器規格標示其具有 $12\text{ V rms}$ 的二次側電壓。畫出負載電阻 $R_L$ 兩端的電壓波形。
 
 ---
+
 **📄 Slide 21**
 
 ![Ch4_Diode_Applications Slide 21](assets/Ch4_Diode_Applications/slide-21.png)
@@ -249,6 +270,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   濾波器輸出電壓中的微小波動稱為**漣波 (ripple)**。
 
 ---
+
 **📄 Slide 22**
 
 ![Ch4_Diode_Applications Slide 22](assets/Ch4_Diode_Applications/slide-22.png)
@@ -262,6 +284,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 3.  **再充電**：在下一個週期的前四分之一期間，當電壓超過電容電壓時，二極體再次變為順向偏壓，對電容重新充電。
 
 ---
+
 **📄 Slide 23**
 
 ![Ch4_Diode_Applications Slide 23](assets/Ch4_Diode_Applications/slide-23.png)
@@ -275,6 +298,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   **較大的時間常數 (Larger time constant)** $\rightarrow$ 較小的漣波 $\rightarrow$ 濾波效果較好。
 
 ---
+
 **📄 Slide 24**
 
 ![Ch4_Diode_Applications Slide 24](assets/Ch4_Diode_Applications/slide-24.png)
@@ -285,6 +309,7 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 *   這使得全波整流器更容易被濾波，因為峰值之間的時間較短。
 
 ---
+
 **📄 Slide 25**
 
 ![Ch4_Diode_Applications Slide 25](assets/Ch4_Diode_Applications/slide-25.png)
@@ -301,6 +326,7 @@ $$V_{DC} \cong \left( 1 - \frac{1}{2f R_L C} \right) V_{p(rect)}$$
 $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 
 ---
+
 **📄 Slide 26**
 
 ![Ch4_Diode_Applications Slide 26](assets/Ch4_Diode_Applications/slide-26.png)
@@ -312,6 +338,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   通常會在輸出端並聯電容 $C_2$（介於 $0.1\ \mu\text{F}$ 至 $1.0\ \mu\text{F}$ 之間），以改善瞬態響應。
 
 ---
+
 **📄 Slide 27**
 
 ![Ch4_Diode_Applications Slide 27](assets/Ch4_Diode_Applications/slide-27.png)
@@ -327,6 +354,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
     *   `79XX` $\rightarrow -XX\text{ V}$
 
 ---
+
 **📄 Slide 28**
 
 ![Ch4_Diode_Applications Slide 28](assets/Ch4_Diode_Applications/slide-28.png)
@@ -336,6 +364,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *(本頁標題頁)*
 
 ---
+
 **📄 Slide 29**
 
 ![Ch4_Diode_Applications Slide 29](assets/Ch4_Diode_Applications/slide-29.png)
@@ -348,6 +377,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
     3.  輸出電壓看起來像輸入電壓的負半部分，但其幅度由分壓器決定。
 
 ---
+
 **📄 Slide 30**
 
 ![Ch4_Diode_Applications Slide 30](assets/Ch4_Diode_Applications/slide-30.png)
@@ -358,6 +388,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   **題目**：峰值輸出電壓 $V_{p(out)}$ 是多少？
 
 ---
+
 **📄 Slide 31**
 
 ![Ch4_Diode_Applications Slide 31](assets/Ch4_Diode_Applications/slide-31.png)
@@ -367,6 +398,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   可以透過與二極體串聯一個**偏壓 (bias voltage, $V_{BIAS}$)**，來調整交流電壓被限制的準位。
 
 ---
+
 **📄 Slide 32**
 
 ![Ch4_Diode_Applications Slide 32](assets/Ch4_Diode_Applications/slide-32.png)
@@ -376,6 +408,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *(此頁展示了限幅器限制電壓的電路和輸出波形圖示)*
 
 ---
+
 **📄 Slide 33**
 
 ![Ch4_Diode_Applications Slide 33](assets/Ch4_Diode_Applications/slide-33.png)
@@ -385,6 +418,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   **題目**：決定輸出電壓的波形。
 
 ---
+
 **📄 Slide 34**
 
 ![Ch4_Diode_Applications Slide 34](assets/Ch4_Diode_Applications/slide-34.png)
@@ -397,6 +431,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   $RC$ 時間常數必須夠大（為週期的 100 倍）以維持直流準位。否則電容可能會放電並導致波形失真。
 
 ---
+
 **📄 Slide 35**
 
 ![Ch4_Diode_Applications Slide 35](assets/Ch4_Diode_Applications/slide-35.png)
@@ -407,6 +442,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   **題目**：您預期在箝位電路中觀察到 $R_L$ 兩端的輸出電壓為何？
 
 ---
+
 **📄 Slide 36**
 
 ![Ch4_Diode_Applications Slide 36](assets/Ch4_Diode_Applications/slide-36.png)
@@ -418,6 +454,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
     2.  在**負半週**期間，二極體 $D_2$ 處於順向偏壓，$D_1$ 處於逆向偏壓。由於 $C_1$ 無法放電，$C_1$ 上的峰值電壓與二次側電壓疊加，將 $C_2$ 充電至約 $2V_p$。
 
 ---
+
 **📄 Slide 37**
 
 ![Ch4_Diode_Applications Slide 37](assets/Ch4_Diode_Applications/slide-37.png)
@@ -428,6 +465,7 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 *   每個型號都有不同的規格。在設計、購買或使用它們之前，必須先閱讀其**產品規格書 (datasheet)**。每個組件都有不同的參數需要關注。
 
 ---
+
 **📄 Slide 38**
 
 ![Ch4_Diode_Applications Slide 38](assets/Ch4_Diode_Applications/slide-38.png)
