@@ -203,7 +203,7 @@ $$V_{R_{LIMIT}} = 0\ \text{V}$$
 
 ![Ch3_Diodes Slide 16](assets/Ch3_Diodes/slide-16.png)
 
-## 範例 (Example) 3/6
+## 範例 (Example) 2/6
 
 *   **題目**：計算實用模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
 *   **2. 實用模型 (Practical model) - 順向偏壓**
@@ -218,7 +218,7 @@ $$V_{R_{LIMIT}} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$
 
 ![Ch3_Diodes Slide 17](assets/Ch3_Diodes/slide-17.png)
 
-## 範例 (Example) 4/6
+## 範例 (Example) 5/6
 
 *   **題目**：計算實用模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
 *   **2. 實用模型 (Practical model) - 逆向偏壓**
@@ -243,7 +243,7 @@ $$V_{R_{LIMIT}} = 0\ \text{V}$$
 
 ![Ch3_Diodes Slide 19](assets/Ch3_Diodes/slide-19.png)
 
-## 範例 (Example) 5/6
+## 範例 (Example) 3/6
 
 *   **題目**：計算完整模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。假設 $r'_d = 10\ \Omega$。
 *   **3. 完整模型 (Complete model) - 順向偏壓**
