@@ -49,13 +49,14 @@ for target_dir in "$ASSETS_DIR"/*; do
         page_str=$(echo "$img_name" | sed -E 's/.*-([0-9]+)\.png/\1/')
 
         # Append to the Markdown file
-        cat <<EOF >> "$md_filepath"
-## Slide $page_str
+        # 附加到 Markdown 檔案
+                cat <<EOF >> "$md_filepath"
+---
+**📄 Slide $page_str**
 
 ![$dirname Slide $page_str](assets/$dirname/$img_name)
 
-**💡 Key notes and analysis:**
-* ---
+
 
 EOF
     done
