@@ -44,7 +44,8 @@
 *   此外部偏壓電壓稱為 $V_{BIAS}$。
 *   *(圖片標示：串聯電阻用於限制電流 To limit the current，以避免損壞二極體)*
 *   條件：
-    $$V_{BIAS} > V_{Barrier\ potential}$$
+
+$$V_{BIAS} > V_{Barrier\ potential}$$
 
 ---
 
@@ -59,7 +60,8 @@
 *   **順向偏壓 (Forward bias)**：產生電流 (Electric current) 與電子流 (Electron current)。
 *   **障壁電位 ($V_{BARRIER}$)** 對於矽 (Silicon) 通常為 $0.7\text{ V}$，對於鍺 (Germanium) 為 $0.3\text{ V}$。
 *   條件：
-    $$V_{BIAS} > V_{BARRIER}$$
+
+$$V_{BIAS} > V_{BARRIER}$$
 
 ---
 
@@ -163,9 +165,10 @@
 
 *   **題目**：計算各種二極體模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出各情況下限流電阻兩端的電壓 $V_{LIMIT}$。
 *   **1. 理想模型 (Ideal model) - 順向偏壓**
-    $$V_F = 0\ \text{V}$$
-    $$I_F = \frac{V_{BIAS}}{R_{LIMIT}} = \frac{10\ \text{V}}{1\ \text{k}\Omega} = 10\ \text{mA}$$
-    $$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0\ \text{V} = 10\ \text{V}$$
+
+$$V_F = 0\ \text{V}$$
+$$I_F = \frac{V_{BIAS}}{R_{LIMIT}} = \frac{10\ \text{V}}{1\ \text{k}\Omega} = 10\ \text{mA}$$
+$$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0\ \text{V} = 10\ \text{V}$$
 
 ---
 
@@ -177,9 +180,10 @@
 
 *   **題目**：計算各種二極體模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出各情況下限流電阻兩端的電壓 $V_{LIMIT}$。
 *   **1. 理想模型 (Ideal model) - 逆向偏壓**
-    $$V_R = V_{BIAS} = 10\ \text{V}$$
-    $$I_R = 0\ \text{A}$$
-    $$V_{LIMIT} = 0\ \text{V}$$
+
+$$V_R = V_{BIAS} = 10\ \text{V}$$
+$$I_R = 0\ \text{A}$$
+$$V_{LIMIT} = 0\ \text{V}$$
 
 ---
 
@@ -203,9 +207,10 @@
 
 *   **題目**：計算實用模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{LIMIT}$。
 *   **2. 實用模型 (Practical model) - 順向偏壓**
-    $$V_F = 0.7\ \text{V}$$
-    $$I_F = \frac{V_{BIAS} - V_F}{R_{LIMIT}} = \frac{10\ \text{V} - 0.7\ \text{V}}{1\ \text{k}\Omega} = \frac{9.3\ \text{V}}{1\ \text{k}\Omega} = 9.3\ \text{mA}$$
-    $$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$$
+
+$$V_F = 0.7\ \text{V}$$
+$$I_F = \frac{V_{BIAS} - V_F}{R_{LIMIT}} = \frac{10\ \text{V} - 0.7\ \text{V}}{1\ \text{k}\Omega} = \frac{9.3\ \text{V}}{1\ \text{k}\Omega} = 9.3\ \text{mA}$$
+$$V_{LIMIT} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$$
 
 ---
 
@@ -217,9 +222,10 @@
 
 *   **題目**：計算實用模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出限流電阻兩端的電壓 $V_{LIMIT}$。
 *   **2. 實用模型 (Practical model) - 逆向偏壓**
-    $$V_R = V_{BIAS} = 10\ \text{V}$$
-    $$I_R = 0\ \text{A}$$
-    $$V_{LIMIT} = 0\ \text{V}$$
+
+$$V_R = V_{BIAS} = 10\ \text{V}$$
+$$I_R = 0\ \text{A}$$
+$$V_{LIMIT} = 0\ \text{V}$$
 
 ---
 
@@ -241,9 +247,10 @@
 
 *   **題目**：計算完整模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{LIMIT}$。假設 $r'_d = 10\ \Omega$。
 *   **3. 完整模型 (Complete model) - 順向偏壓**
-    $$I_F = \frac{V_{BIAS} - 0.7\ \text{V}}{R_{LIMIT} + r'_d} = \frac{10\ \text{V} - 0.7\ \text{V}}{1000\ \Omega + 10\ \Omega} = \frac{9.3\ \text{V}}{1010\ \Omega} \approx 9.21\ \text{mA}$$
-    $$V_F = 0.7\ \text{V} + I_F r'_d = 0.7\ \text{V} + (9.21\ \text{mA})(10\ \Omega) = 0.7\ \text{V} + 92\ \text{mV} = 792\ \text{mV}$$
-    $$V_{LIMIT} = I_F R_{LIMIT} = (9.21\ \text{mA})(1\ \text{k}\Omega) = 9.21\ \text{V}$$
+
+$$I_F = \frac{V_{BIAS} - 0.7\ \text{V}}{R_{LIMIT} + r'_d} = \frac{10\ \text{V} - 0.7\ \text{V}}{1000\ \Omega + 10\ \Omega} = \frac{9.3\ \text{V}}{1010\ \Omega} \approx 9.21\ \text{mA}$$
+$$V_F = 0.7\ \text{V} + I_F r'_d = 0.7\ \text{V} + (9.21\ \text{mA})(10\ \Omega) = 0.7\ \text{V} + 92\ \text{mV} = 792\ \text{mV}$$
+$$V_{LIMIT} = I_F R_{LIMIT} = (9.21\ \text{mA})(1\ \text{k}\Omega) = 9.21\ \text{V}$$
 
 ---
 
@@ -255,6 +262,7 @@
 
 *   **題目**：計算完整模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出限流電阻兩端的電壓 $V_{LIMIT}$。假設完整模型中 $I_R = 1\ \mu\text{A}$。
 *   **3. 完整模型 (Complete model) - 逆向偏壓**
-    $$I_R = 1\ \mu\text{A}$$
-    $$V_{LIMIT} = I_R R_{LIMIT} = (1\ \mu\text{A})(1\ \text{k}\Omega) = 1\ \text{mV}$$
-    $$V_R = V_{BIAS} - V_{LIMIT} = 10\ \text{V} - 0.001\ \text{V} = 9.999\ \text{V}$$
+
+$$I_R = 1\ \mu\text{A}$$
+$$V_{LIMIT} = I_R R_{LIMIT} = (1\ \mu\text{A})(1\ \text{k}\Omega) = 1\ \text{mV}$$
+$$V_R = V_{BIAS} - V_{LIMIT} = 10\ \text{V} - 0.001\ \text{V} = 9.999\ \text{V}$$
