@@ -65,26 +65,37 @@ me-applied-electronics/
 - V-I 特性曲線
 - 二極體模型（理想模型、實用模型、完整模型）
 
+### 第四章：二極體的應用
+[📖 04-diode-applications.md](notes/04-diode-applications.md)
+- 直流電源供應器的四個組成部分
+- 變壓器的工作原理
+- 半波整流器與全波整流器
+- AC 訊號的參數（峰值、RMS、平均值）
+- 電源濾波器與漣波因數
+- 電壓穩壓器
+- 特殊應用（限幅器、箝位器、倍壓器）
+
 ## 課程進度表
 
 | 週次 | 日期 | 主題 | 筆記 |
 |------|------|------|------|
 | 1 | 2/23 | 介紹 (Introduction) | [01-introduction.md](notes/01-introduction.md) |
 | 2 | 3/2 | 半導體與電子學 (Semiconductors and electronics) | [02-semiconductors.md](notes/02-semiconductors.md) |
-| 3 | 3/9 | 二極體與應用 (Diodes and applications) | [03-diodes.md](notes/03-diodes.md) |
-| 4 | 3/16 | 雙極性接面電晶體 (BJTs) | 待完成 |
-| 5 | 3/23 | BJT 放大器 (BJT amplifiers) | 待完成 |
-| 6 | 3/30 | 場效電晶體與開關電路 (FETs and switching circuits) | 待完成 |
-| 7 | 4/6 | 兒童節/清明節（停課） | - |
-| 8 | 4/13 | 期中考 (Midterm exam) | - |
-| 9 | 4/20 | 運算放大器 (Op-Amp) | 待完成 |
-| 10 | 4/27 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
+| 3 | 3/9 | 二極體 (Diodes) | [03-diodes.md](notes/03-diodes.md) |
+| 4 | 3/16 | 二極體的應用 (Diode Applications) | [04-diode-applications.md](notes/04-diode-applications.md) |
+| 5 | 3/23 | 雙極性接面電晶體 (BJTs) | 待完成 |
+| 6 | 3/30 | BJT 放大器 (BJT amplifiers) | 待完成 |
+| 7 | 4/6 | 場效電晶體與開關電路 (FETs and switching circuits) | 待完成 |
+| 8 | 4/13 | 兒童節/清明節（停課） | - |
+| 9 | 4/20 | 期中考 (Midterm exam) | - |
+| 10 | 4/27 | 運算放大器 (Op-Amp) | 待完成 |
 | 11 | 5/4 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
-| 12 | 5/11 | 特殊用途運算放大器電路 (Special purpose Op-Amp circuits) | 待完成 |
-| 13 | 5/18 | 頻率響應 (Frequency response) | 待完成 |
-| 14 | 5/25 | 主動濾波器 (Active filters) | 待完成 |
-| 15 | 6/1 | 振盪器 (Oscillators) | 待完成 |
-| 16 | 6/8 | 期末考 (Final exam) | - |
+| 12 | 5/11 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
+| 13 | 5/18 | 特殊用途運算放大器電路 (Special purpose Op-Amp circuits) | 待完成 |
+| 14 | 5/25 | 頻率響應 (Frequency response) | 待完成 |
+| 15 | 6/1 | 主動濾波器 (Active filters) | 待完成 |
+| 16 | 6/8 | 振盪器 (Oscillators) | 待完成 |
+| 17 | 6/15 | 期末考 (Final exam) | - |
 
 ## 評分標準
 
@@ -92,7 +103,7 @@ me-applied-electronics/
 |------|------|------|
 | 出席 (Attendance) | 10% | 課堂參與與出席狀況 |
 | 小考 (Quiz) | 20% | 課堂小考，共6次 |
-| 期中考 (Midterm Exam) | 35% | 半導體、電子學、二極體、BJT、開關電路 |
+| 期中考 (Midterm Exam) | 35% | 半導體、電子學、二極體、二極體應用、BJT |
 | 期末考 (Final Exam) | 35% | Op-Amp電路、主動濾波器、振盪器 |
 
 ## 參考教材
