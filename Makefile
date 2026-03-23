@@ -32,9 +32,9 @@ help:
 # Generate assets (PNG images from PDFs)
 assets:
 	@echo "Generating assets from PDF files..."
-	@cd script && ./generate_assets.sh
+	@./script/generate_assets.sh
 
 # Generate markdown skeletons (depends on assets)
 skeletons: assets
 	@echo "Generating markdown skeletons..."
-	@cd script && ./generate_skeletons.sh
+	@./script/generate_skeletons.sh
