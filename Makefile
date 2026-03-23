@@ -2,7 +2,7 @@
 # This Makefile automates the conversion of PDF course materials to
 # markdown notes with embedded slide images.
 
-.PHONY: all help assets skeletons clean clean-assets clean-skeletons
+.PHONY: all help assets skeletons
 
 # Default target
 all: assets skeletons
@@ -16,9 +16,6 @@ help:
 	@echo "  make all         - Generate assets and skeletons (default)"
 	@echo "  make assets      - Convert PDFs to PNG images"
 	@echo "  make skeletons   - Create markdown skeleton files"
-	@echo "  make clean       - Remove all generated files"
-	@echo "  make clean-assets- Remove generated PNG images only"
-	@echo "  make clean-skeletons - Remove generated markdown files only"
 	@echo "  make help        - Show this help message"
 	@echo ""
 	@echo "Prerequisites:"
