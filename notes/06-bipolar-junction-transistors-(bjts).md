@@ -145,7 +145,19 @@ $$ \alpha_{DC} = \frac{I_C}{I_E} $$
 
 ## EXERCISE
 
-* Determine the DC current gains $\beta_{DC}$, $\alpha_{DC}$, and the emitter current $I_E$ for a transistor where $I_B = 50 \mu A$ and $I_C = 3.65 mA$.
+* Determine the DC current gains $\beta_{DC}$, $\alpha_{DC}$, and the emitter current $I_E$ for a transistor where $I_B = 50 \mu A$ and $I_C = 3.65 mA$。
+
+**Sol：**
+
+$$ \beta_{DC} = \frac{I_C}{I_B} = \frac{3.65\text{ mA}}{50\mu A} = \frac{3.65 \times 10^{-3}}{50 \times 10^{-6}} = 73 $$
+
+$$ I_E = I_B + I_C = 50\mu A + 3.65\text{ mA} = 0.05\text{ mA} + 3.65\text{ mA} = 3.7\text{ mA} $$
+
+$$ \alpha_{DC} = \frac{I_C}{I_E} = \frac{3.65\text{ mA}}{3.7\text{ mA}} = 0.986 $$
+
+或者：
+
+$$ \alpha_{DC} = \frac{\beta_{DC}}{\beta_{DC} + 1} = \frac{73}{73 + 1} = \frac{73}{74} = 0.986 $$
 
 **note：**
 隨堂練習：給定基極與集極電流，計算直流電流增益 $\beta_{DC}$、$\alpha_{DC}$ 與射極電流 $I_E$。($I_E = I_B + I_C$)
@@ -347,6 +359,18 @@ Assume $V_{CE(sat)} = 0.2 V$.
   * $R_B = 6.8 k\Omega$
   * $V_{CC} = 12 V$
   * $R_C = 180 \Omega$
+
+**Sol：**
+
+**Step 1:**
+$$ I_B = \frac{V_{BB} - V_{BE}}{R_B} = \frac{1.5 - 0.7}{6.8k\Omega} = 117.6 \mu A $$
+$$ I_C = \beta_{DC} I_B = (125)(117.6\mu A) = 14.7 mA $$
+
+**Step 2:**
+$$ I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C} = \frac{12 - 0.2}{180\Omega} = 65.6 mA $$
+
+**Step 3:**
+$I_C < I_{C(sat)} \rightarrow$ The transistor is not in saturation. (It is in the active region)
 
 **note：**
 飽和狀態判斷練習：給定電路參數，藉由計算基極電流並推算集極電流，再與電路能提供的飽和電流做比較，以確認電晶體的工作狀態。
