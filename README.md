@@ -30,12 +30,18 @@ me-applied-electronics/
 ├── course-materials/                   # 原始課程材料
 │   ├── Ch1_Introduction.pdf
 │   ├── Ch2_Semiconductors_and_Electronics.pdf
-│   └── Ch3_Diodes.pdf
+│   ├── Ch3_Diodes.pdf
+│   ├── Ch4_Diode_Applications.pdf
+│   ├── Ch5_Special_purpose_Diodes.pdf
+│   └── Ch6_Bipolar_Junction_Transistors_(BJTs).pdf
 └── notes/                              # 組織化的筆記
     ├── 01-introduction.md
-    ├── 02-semiconductors.md
+    ├── 02-semiconductors-and-electronics.md
     ├── 03-diodes.md
-    └── resources/                      # 詳細資源目錄
+    ├── 04-diode-applications.md
+    ├── 05-special-purpose-diodes.md
+    ├── 06-bipolar-junction-transistors-(bjts).md
+    └── assets/                         # 投影片圖片資源
 ```
 
 ## 筆記目錄
@@ -49,7 +55,7 @@ me-applied-electronics/
 - 電路學基本定律回顧
 
 ### 第二章：半導體和電子學
-[📖 02-semiconductors.md](notes/02-semiconductors.md)
+[📖 02-semiconductors-and-electronics.md](notes/02-semiconductors-and-electronics.md)
 - 元素週期表與材料分類
 - 導體、絕緣體與半導體
 - 帶隙 (Band Gap) 的概念
@@ -75,27 +81,41 @@ me-applied-electronics/
 - 電壓穩壓器
 - 特殊應用（限幅器、箝位器、倍壓器）
 
+### 第五章：特殊用途二極體
+[📖 05-special-purpose-diodes.md](notes/05-special-purpose-diodes.md)
+- 穩壓二極體 (Zener Diodes)
+- 穩壓二極體的應用
+- 變容二極體 (Varactor Diodes)
+- LED 與光電二極體
+- 其他特殊用途二極體
+
+### 第六章：雙極性接面電晶體
+[📖 06-bipolar-junction-transistors-(bjts).md](notes/06-bipolar-junction-transistors-(bjts).md)
+- BJT 的結構與操作原理
+- BJT 的特性曲線
+- BJT 的偏壓電路
+- BJT 作為開關與放大器
+
 ## 課程進度表
 
 | 週次 | 日期 | 主題 | 筆記 |
 |------|------|------|------|
 | 1 | 2/23 | 介紹 (Introduction) | [01-introduction.md](notes/01-introduction.md) |
-| 2 | 3/2 | 半導體與電子學 (Semiconductors and electronics) | [02-semiconductors.md](notes/02-semiconductors.md) |
-| 3 | 3/9 | 二極體 (Diodes) | [03-diodes.md](notes/03-diodes.md) |
-| 4 | 3/16 | 二極體的應用 (Diode Applications) | [04-diode-applications.md](notes/04-diode-applications.md) |
-| 5 | 3/23 | 雙極性接面電晶體 (BJTs) | 待完成 |
-| 6 | 3/30 | BJT 放大器 (BJT amplifiers) | 待完成 |
-| 7 | 4/6 | 場效電晶體與開關電路 (FETs and switching circuits) | 待完成 |
-| 8 | 4/13 | 兒童節/清明節（停課） | - |
-| 9 | 4/20 | 期中考 (Midterm exam) | - |
-| 10 | 4/27 | 運算放大器 (Op-Amp) | 待完成 |
+| 2 | 3/2 | 半導體與電子學 (Semiconductors and electronics) | [02-semiconductors-and-electronics.md](notes/02-semiconductors-and-electronics.md) |
+| 3 | 3/9 | 二極體及其應用 (Diodes and applications) | [03-diodes.md](notes/03-diodes.md) |
+| 4 | 3/16 | 雙極性接面電晶體 (BJTs) | [06-bipolar-junction-transistors-(bjts).md](notes/06-bipolar-junction-transistors-(bjts).md) |
+| 5 | 3/23 | BJT 放大器 (BJT amplifiers) | 待完成 |
+| 6 | 3/30 | 場效電晶體與開關電路 (FETs and switching circuits) | 待完成 |
+| 7 | 4/6 | 兒童節/清明節（停課） | - |
+| 8 | 4/13 | 期中考 (Midterm exam) | - |
+| 9 | 4/20 | 運算放大器 (Op-Amp) | 待完成 |
+| 10 | 4/27 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
 | 11 | 5/4 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
-| 12 | 5/11 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
-| 13 | 5/18 | 特殊用途運算放大器電路 (Special purpose Op-Amp circuits) | 待完成 |
-| 14 | 5/25 | 頻率響應 (Frequency response) | 待完成 |
-| 15 | 6/1 | 主動濾波器 (Active filters) | 待完成 |
-| 16 | 6/8 | 振盪器 (Oscillators) | 待完成 |
-| 17 | 6/15 | 期末考 (Final exam) | - |
+| 12 | 5/11 | 特殊用途運算放大器電路 (Special purpose Op-Amp circuits) | 待完成 |
+| 13 | 5/18 | 頻率響應 (Frequency response) | 待完成 |
+| 14 | 5/25 | 主動濾波器 (Active filters) | 待完成 |
+| 15 | 6/1 | 振盪器 (Oscillators) | 待完成 |
+| 16 | 6/8 | 期末考 (Final exam) | - |
 
 ## 評分標準
 
@@ -146,6 +166,6 @@ me-applied-electronics/
 
 ---
 
-**最後更新**：2025年1月
+**最後更新**：2025年4月
 
 **學期**：113學年度 第二學期
