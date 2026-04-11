@@ -161,14 +161,13 @@ $$V_{BIAS} > V_{BARRIER}$$
 
 ![Ch3_Diodes Slide 13](assets/Ch3_Diodes/slide-13.png)
 
-## 範例 (Example) 1/6
+## 範例 (Example) 1/6: 理想模型 - 順向偏壓
 
-*   **題目**：計算各種二極體模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出各情況下限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
-*   **1. 理想模型 (Ideal model) - 順向偏壓**
-
-$$V_F = 0\ \text{V}$$
-$$I_F = \frac{V_{BIAS}}{R_{LIMIT}} = \frac{10\ \text{V}}{1\ \text{k}\Omega} = 10\ \text{mA}$$
-$$V_{R_{LIMIT}} = V_{BIAS} - V_F = 10\ \text{V} - 0\ \text{V} = 10\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega$。使用**理想模型 (Ideal Model)**。
+*   **計算**:
+    *   二極體視為短路：$V_F = 0V$
+    *   順向電流: $I_F = \frac{V_{BIAS}}{R_{LIMIT}} = \frac{10V}{1k\Omega} = \mathbf{10mA}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = V_{BIAS} - V_F = 10V - 0V = \mathbf{10V}$
 
 ---
 
@@ -176,14 +175,13 @@ $$V_{R_{LIMIT}} = V_{BIAS} - V_F = 10\ \text{V} - 0\ \text{V} = 10\ \text{V}$$
 
 ![Ch3_Diodes Slide 14](assets/Ch3_Diodes/slide-14.png)
 
-## 範例 (Example) 2/6
+## 範例 (Example) 2/6: 理想模型 - 逆向偏壓
 
-*   **題目**：計算各種二極體模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出各情況下限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
-*   **1. 理想模型 (Ideal model) - 逆向偏壓**
-
-$$V_R = V_{BIAS} = 10\ \text{V}$$
-$$I_R = 0\ \text{A}$$
-$$V_{R_{LIMIT}} = 0\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega$。使用**理想模型 (Ideal Model)**。
+*   **計算**:
+    *   二極體視為斷路：$I_R = 0A$
+    *   逆向電壓: $V_R = V_{BIAS} = \mathbf{10V}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = I_R \cdot R_{LIMIT} = \mathbf{0V}$
 
 ---
 
@@ -193,8 +191,8 @@ $$V_{R_{LIMIT}} = 0\ \text{V}$$
 
 ## 實用模型 (Practical Model)
 
-*   **實用模型**包含障壁電位，將在後續的分析中使用。
-*   當二極體處於順向偏壓時，它等效於一個閉合開關串聯一個等於障壁電位（$0.7\text{ V}$）的等效電壓源（$V_F$），正極朝向陽極。
+*   **實用模型**包含障壁電位 ($0.7V$)，將在後續的分析中使用。
+*   當二極體處於順向偏壓時，它等效於一個閉合開關串聯一個等於障壁電位的等效電壓源（$V_F$），正極朝向陽極。
 *   當二極體處於逆向偏壓時，它和理想模型一樣是一個斷開的開關。
 
 ---
@@ -203,14 +201,13 @@ $$V_{R_{LIMIT}} = 0\ \text{V}$$
 
 ![Ch3_Diodes Slide 16](assets/Ch3_Diodes/slide-16.png)
 
-## 範例 (Example) 2/6
+## 範例 (Example) 3/6: 實用模型 - 順向偏壓
 
-*   **題目**：計算實用模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
-*   **2. 實用模型 (Practical model) - 順向偏壓**
-
-$$V_F = 0.7\ \text{V}$$
-$$I_F = \frac{V_{BIAS} - V_F}{R_{LIMIT}} = \frac{10\ \text{V} - 0.7\ \text{V}}{1\ \text{k}\Omega} = \frac{9.3\ \text{V}}{1\ \text{k}\Omega} = 9.3\ \text{mA}$$
-$$V_{R_{LIMIT}} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega$。使用**實用模型 (Practical Model)**。
+*   **計算**:
+    *   考慮障壁電位：$V_F = \mathbf{0.7V}$
+    *   順向電流: $I_F = \frac{V_{BIAS} - V_F}{R_{LIMIT}} = \frac{10V - 0.7V}{1k\Omega} = \frac{9.3V}{1k\Omega} = \mathbf{9.3mA}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = V_{BIAS} - V_F = \mathbf{9.3V}$
 
 ---
 
@@ -218,14 +215,13 @@ $$V_{R_{LIMIT}} = V_{BIAS} - V_F = 10\ \text{V} - 0.7\ \text{V} = 9.3\ \text{V}$
 
 ![Ch3_Diodes Slide 17](assets/Ch3_Diodes/slide-17.png)
 
-## 範例 (Example) 5/6
+## 範例 (Example) 4/6: 實用模型 - 逆向偏壓
 
-*   **題目**：計算實用模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。
-*   **2. 實用模型 (Practical model) - 逆向偏壓**
-
-$$V_R = V_{BIAS} = 10\ \text{V}$$
-$$I_R = 0\ \text{A}$$
-$$V_{R_{LIMIT}} = 0\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega$。使用**實用模型 (Practical Model)**。
+*   **計算**:
+    *   逆向狀態下與理想模型一致：$I_R = 0A$
+    *   逆向電壓: $V_R = V_{BIAS} = \mathbf{10V}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = \mathbf{0V}$
 
 ---
 
@@ -243,14 +239,13 @@ $$V_{R_{LIMIT}} = 0\ \text{V}$$
 
 ![Ch3_Diodes Slide 19](assets/Ch3_Diodes/slide-19.png)
 
-## 範例 (Example) 3/6
+## 範例 (Example) 5/6: 完整模型 - 順向偏壓
 
-*   **題目**：計算完整模型下，二極體的順向電壓 $V_F$ 與順向電流 $I_F$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。假設 $r'_d = 10\ \Omega$。
-*   **3. 完整模型 (Complete model) - 順向偏壓**
-
-$$I_F = \frac{V_{BIAS} - 0.7\ \text{V}}{R_{LIMIT} + r'_d} = \frac{10\ \text{V} - 0.7\ \text{V}}{1000\ \Omega + 10\ \Omega} = \frac{9.3\ \text{V}}{1010\ \Omega} \approx 9.21\ \text{mA}$$
-$$V_F = 0.7\ \text{V} + I_F r'_d = 0.7\ \text{V} + (9.21\ \text{mA})(10\ \Omega) = 0.7\ \text{V} + 92\ \text{mV} = 792\ \text{mV}$$
-$$V_{R_{LIMIT}} = I_F R_{LIMIT} = (9.21\ \text{mA})(1\ \text{k}\Omega) = 9.21\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega, r'_d = 10\Omega$。使用**完整模型 (Complete Model)**。
+*   **計算**:
+    *   順向電流: $I_F = \frac{V_{BIAS} - 0.7V}{R_{LIMIT} + r'_d} = \frac{9.3V}{1010\Omega} \approx \mathbf{9.21mA}$
+    *   二極體電壓: $V_F = 0.7V + I_F \cdot r'_d = 0.7V + (9.21mA \cdot 10\Omega) \approx \mathbf{0.792V}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = I_F \cdot R_{LIMIT} = \mathbf{9.21V}$
 
 ---
 
@@ -258,11 +253,10 @@ $$V_{R_{LIMIT}} = I_F R_{LIMIT} = (9.21\ \text{mA})(1\ \text{k}\Omega) = 9.21\ \
 
 ![Ch3_Diodes Slide 20](assets/Ch3_Diodes/slide-20.png)
 
-## 範例 (Example) 6/6
+## 範例 (Example) 6/6: 完整模型 - 逆向偏壓
 
-*   **題目**：計算完整模型下，二極體的逆向電壓 $V_R$ 與逆向電流 $I_R$。同時求出限流電阻兩端的電壓 $V_{R_{LIMIT}}$。假設完整模型中 $I_R = 1\ \mu\text{A}$。
-*   **3. 完整模型 (Complete model) - 逆向偏壓**
-
-$$I_R = 1\ \mu\text{A}$$
-$$V_{R_{LIMIT}} = I_R R_{LIMIT} = (1\ \mu\text{A})(1\ \text{k}\Omega) = 1\ \text{mV}$$
-$$V_R = V_{BIAS} - V_{R_{LIMIT}} = 10\ \text{V} - 0.001\ \text{V} = 9.999\ \text{V}$$
+*   **條件**: $V_{BIAS} = 10V, R_{LIMIT} = 1k\Omega, I_R = 1\mu A$。使用**完整模型 (Complete Model)**。
+*   **計算**:
+    *   逆向電流 (漏電流): $I_R = \mathbf{1\mu A}$
+    *   限流電阻壓降: $V_{R_{LIMIT}} = I_R \cdot R_{LIMIT} = 1\mu A \cdot 1k\Omega = \mathbf{1mV}$
+    *   逆向電壓: $V_R = V_{BIAS} - V_{R_{LIMIT}} = 10V - 0.001V = \mathbf{9.999V}$
