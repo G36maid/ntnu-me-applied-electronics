@@ -28,6 +28,8 @@
         $$I_R = \frac{V_{BIAS}}{r'_R + R_{LIMIT}}$$
         $$V_D = V_{BIAS} - I_R \cdot R_{LIMIT}$$
 
+![Diode Models](notes/assets/Ch3_Diodes/slide-18.png)
+
 ---
 
 ## 4. 二極體應用 (Diode Applications)
@@ -49,6 +51,9 @@
     *   **漣波因子 (Ripple Factor $r$)**: 負載電阻 $R_L$ 或電容 $C$ 越大 $\rightarrow$ $r$ 越小 (濾波越好)。
     *   **中心抽頭 PIV 另一種算法**: $PIV = 2V_{p(out)} + 0.7V$
 
+![Rectifier Circuits](notes/assets/Ch4_Diode_Applications/slide-16.png)
+![Rectifier Performance](notes/assets/Ch4_Diode_Applications/slide-19.png)
+
 ### 限幅器 (Clipper / Limiter) - 「切掉部分波形」
 *   **判斷口訣**: 二極體與負載 **並聯**。看二極體箭頭指向。
     *   **二極體向下 (⬇️)**: 正限幅 (**Positive Clipper**)，切掉上方 (Top)。
@@ -57,6 +62,9 @@
 *   **含串聯電阻時的計算** (二極體導通半週):
     $$I = \frac{V_{in} - 0.7V}{R_1 + R_2}$$
     $$V_{out} = 0.7V + I \cdot R_2$$
+
+![Clipper Circuits](notes/assets/Ch4_Diode_Applications/slide-31.png)
+![Clipper Examples](notes/assets/Ch4_Diode_Applications/slide-32.png)
 
 ### 箝位器 (Clamper) - 「平移整體波形」
 *   **判斷口訣**: 二極體與負載 **串聯** (含電容)。看二極體箭頭指向。
@@ -67,6 +75,8 @@
     *   **正箝位 (上移)**: $V_{out(max)} = V_{p(in)} + V_C$, $V_{out(min)} = -V_{p(in)} + V_C$
     *   **負箝位 (下移)**: $V_{out(max)} = V_{p(in)} - V_C$, $V_{out(min)} = -V_{p(in)} - V_C$
     *   **峰對峰值不變**: $V_{p-p(out)} = V_{p-p(in)}$
+
+![Clamper Circuits](notes/assets/Ch4_Diode_Applications/slide-34.png)
 
 ---
 
@@ -82,6 +92,9 @@
 ---
 
 ## 6. BJT 電晶體直流分析 (BJT DC Analysis)
+
+![BJT DC Analysis](notes/assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-11.png)
+
 ### 🎯 解題流程（The Duel Rule）
 1. **算 $I_B$**：$I_B = \frac{V_{BB} - 0.7V}{R_B}$。若 $V_{BB} < 0.7V$ → **截止區**，$I_C = 0$，$V_{CE} = V_{CC}$。
 2. **算「理想需求」**：$I_{C(ideal)} = \beta_{DC} \times I_B$
@@ -117,6 +130,8 @@
     *   條件：$V_{BE} \approx 0.7V$ 且未達飽和。
     *   狀態：$I_C = \beta I_B$，$V_{CE} = V_{CC} - I_C R_C$。可用於 **放大器 (Amplifier)**。
 
+![BJT Regions](notes/assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-18.png)
+
 ### BJT 開關設計公式 (Switch Design)
 *   **飽和所需最小基極電流**: $I_{B(min)} = \frac{I_{C(sat)}}{\beta_{DC}}$
 *   **最大基極電阻**: $R_{B(max)} = \frac{V_{IN} - V_{BE}}{I_{B(min)}}$
@@ -129,3 +144,12 @@
 3.  **畫圖 (Sketching)**: 輸出波形一定要標出 **峰點 (Peak values)** 的電壓值。
 4.  **降壓變壓器**: 一次側峰值 $\div$ 匝數比 = 二次側峰值。
 5.  **橋式整流**: 兩顆二極體同時導通，壓降 $= 2 \times 0.7V = 1.4V$。
+
+### ⚠️ 常見錯誤提醒 (Common Pitfalls)
+1.  **中間值捨入**: 計算過程保留 **3-4 位有效數字**，最後一步再捨入。過早捨入會累積誤差，甚至導致 BJT 區域**誤判**。
+2.  **單位換算**: $\mu A \leftrightarrow mA$（$1\;mA = 1000\;\mu A$）。$I_B$ 常用 $\mu A$，$I_C$ 常用 $mA$，代入公式前**先統一單位**。
+3.  **$I_E$ 公式**: $I_E = (\beta_{DC} + 1) \times I_B$，是**乘法**不是除法。
+4.  **$\alpha_{DC}$ 公式**: $\alpha_{DC} = \frac{\beta}{\beta + 1}$，注意 $\beta$ 在**分子**。寫分數式時要清楚標示分母範圍，避免 $\frac{\beta}{\beta} + 1$ 的歧義。
+5.  **限幅器 $V_{max}$**: 沒有 $R_L$ 時，二極體截止期間 $V_{out} = V_{in}$（完整跟隨），**不是**電池電壓。Clipping Level 只是「被切的那段」的邊界。
+6.  **箝位器 $V_{p-p}$**: 輸入峰對峰 $= 2 \times V_p$（如 $\pm 8V \rightarrow V_{p-p} = 16V$），不是 $V_p$ 本身。箝位前後 $V_{p-p}$ 不變。
+7.  **簡答題完整性**: 問偏壓條件就寫 BE 和 BC 各自狀態，問應用就寫應用，**不要只答一半**。
