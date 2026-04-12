@@ -82,6 +82,19 @@
 ---
 
 ## 6. BJT 電晶體直流分析 (BJT DC Analysis)
+### 🎯 解題流程（The Duel Rule）
+1. **算 $I_B$**：$I_B = \frac{V_{BB} - 0.7V}{R_B}$。若 $V_{BB} < 0.7V$ → **截止區**，$I_C = 0$，$V_{CE} = V_{CC}$。
+2. **算「理想需求」**：$I_{C(ideal)} = \beta_{DC} \times I_B$
+3. **算「現實極限」**：$I_{C(sat)} = \frac{V_{CC} - 0.2V}{R_C}$
+4. **決鬥判斷**：$I_{C(ideal)} > I_{C(sat)}$ → **飽和** ($V_{CE} = 0.2V$)；否則 → **主動區** ($V_{CE} = V_{CC} - I_C R_C$)
+
+> 💡 記憶：「理想需求 vs 現實極限」，需求超過極限就飽和。
+
+### 開關設計（反推 $R_B$）
+1. $I_{C(sat)} = \frac{V_{CC} - 0.2V}{R_C}$
+2. $I_{B(min)} = \frac{I_{C(sat)}}{\beta_{DC}}$
+3. $R_{B(max)} = \frac{V_{IN} - 0.7V}{I_{B(min)}}$
+
 ### 核心公式 (Core Equations)
 *   $I_E = I_C + I_B$
 *   $I_C = \beta_{DC} I_B$
