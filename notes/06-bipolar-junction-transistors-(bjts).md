@@ -232,15 +232,10 @@ $$ V_{CB} = V_{CE} - V_{BE} $$
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 13](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-13.png)
 
-## CHARACTERISTIC CURVE
+## 特性曲線 (Characteristic Curve)
 
-* Varying $V_{BB}$ and $V_{CC}$ to control $I_B$ and $I_C$, respectively, a set of BJT characteristic curves I-V特性曲線圖 can be plotted.
-  * Fixed $I_B$
-  * Varying $I_B$
-
-**note：**
-* BJT 的特性曲線 (I-V 曲線) 繪製了集極電流 $I_C$ 對集極-射極電壓 $V_{CE}$ 的關係。
-* 透過固定不同的基極電流 $I_B$ 作為參數，可以畫出多條曲線，反映出電晶體在不同操作條件下的狀態。
+*   **定義**: 繪製了集極電流 $I_C$ (Y軸) 與集極-射極電壓 $V_{CE}$ (X軸) 之間的關係。
+*   **參數**: 透過固定不同的基極電流 $I_B$ 作為參數，可以畫出多條水平曲線。這些曲線反映出電晶體在不同 $I_B$ 驅動下的輸出能力。
 
 ---
 
@@ -248,22 +243,11 @@ $$ V_{CB} = V_{CE} - V_{BE} $$
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 14](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-14.png)
 
-## OPERATION MODES OF BJT
+## 工作模式 1：截止區 (Cutoff Mode)
 
-* BJTs have 3 operation modes:
-
-1. **Cutoff mode 截止區 (Off state)**:
-   ➢ Both the BE and BC junctions are reverse-biased 逆向.
-   ➢ No current flows from collector to emitter ($I_C \cong 0$).
-   ➢ The transistor behaves like an open switch 開路.
-   
-   ❖ Conditions:
-   $$ V_{BE} < V_{BE(ON)} $$
-   $$ I_B \cong 0, I_C \cong 0 $$
-
-**note：**
-* BJT 運作模式 1 —— 截止區 (Cutoff Mode)：BE 與 BC 介面皆處於逆向偏壓。
-* 此時電晶體如同「開路開關」，幾乎沒有電流流過 ($I_B \cong 0$, $I_C \cong 0$)，且 $V_{BE} < 0.7V$。
+*   **偏壓條件**: $BE$ 接面逆偏、$BC$ 接面逆偏。
+*   **電路表現**: 如同 **「開路開關 (Open switch)」**，幾乎沒有電流流過。
+*   **數值判定**: $V_{BE} < 0.7V$ (推不動二極體)，且 $I_B \cong 0, I_C \cong 0$。
 
 ---
 
@@ -271,21 +255,11 @@ $$ V_{CB} = V_{CE} - V_{BE} $$
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 15](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-15.png)
 
-## OPERATION MODES OF BJT
+## 工作模式 2：主動區 (Active Mode)
 
-* BJTs have 3 operation modes:
-
-2. **Active mode 主動區 (Amplification)**:
-   ➢ The BE junction is forward-biased 順向, while the BC junction is reverse-biased 逆向.
-   ➢ The transistor behaves like an amplifier 放大器, where $I_C$ is proportional to $I_B$ according to the gain $\beta_{DC}$.
-   
-   ❖ Conditions:
-   $$ V_{BE} = 0.7V, V_{CE} > V_{BE} $$
-   $$ I_C = \beta_{DC} I_B $$
-
-**note：**
-* BJT 運作模式 2 —— 主動區 (Active Mode)：BE 介面順向偏壓、BC 介面逆向偏壓。
-* 電晶體作為「放大器」使用，集極電流 $I_C$ 與基極電流 $I_B$ 成 $\beta_{DC}$ 倍的正比關係。條件為 $V_{BE} \cong 0.7V$ 且 $V_{CE} > 0.7V$。
+*   **偏壓條件**: $BE$ 接面順偏、$BC$ 接面逆偏。
+*   **電路表現**: 作為 **「放大器 (Amplifier)」**，用小電流控制大電流。
+*   **數值判定**: $V_{BE} \cong 0.7V$。最關鍵的特徵是 **$I_C = \beta_{DC} \times I_B$** (線性放大)。
 
 ---
 
@@ -293,21 +267,11 @@ $$ V_{CB} = V_{CE} - V_{BE} $$
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 16](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-16.png)
 
-## OPERATION MODES OF BJT
+## 工作模式 3：飽和區 (Saturation Mode)
 
-* BJTs have 3 operation modes:
-
-3. **Saturation mode 飽和區 (On state)**:
-   ➢ Both the BE and BC junctions are forward-biased 順向.
-   ➢ The transistor acts like a closed switch 通路, but $I_C$ is less than $\beta_{DC} I_B$.
-   
-   ❖ Conditions:
-   $$ V_{BE} = 0.7V, V_{CE} < V_{BE} $$
-   $$ I_C < \beta_{DC} I_B $$
-
-**note：**
-* BJT 運作模式 3 —— 飽和區 (Saturation Mode)：BE 與 BC 介面皆處於順向偏壓。
-* 電晶體如同「導通開關 (通路)」，此時 $I_C$ 達到最大限制，不再與 $I_B$ 成 $\beta_{DC}$ 倍數的線性比例 ($I_C < \beta_{DC} I_B$)，且 $V_{CE}$ 降至極低 (通常 < 0.7V)。
+*   **偏壓條件**: $BE$ 接面順偏、$BC$ 接面順偏。
+*   **電路表現**: 如同 **「通路開關 (Closed switch)」**，電流達到電路能提供的極限。
+*   **數值判定**: $V_{BE} \cong 0.7V$。此時 $I_C$ 不再受 $\beta$ 放大限制，而是 **$I_C < \beta_{DC} \times I_B$**，且 $V_{CE}$ 會降到非常低 (飽和電壓 $V_{CE(sat)}$)。
 
 ---
 
@@ -315,23 +279,66 @@ $$ V_{CB} = V_{CE} - V_{BE} $$
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 17](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-17.png)
 
-## DC LOAD LINE
+## 直流負載線 (DC Load Line)
 
-* To better understand about the transition of the 3 modes, let us see the DC load line 直流電負載線, where $V_{CC}$ is fixed and $V_{BB}$ is modified to increase $I_B$.
+*   直流負載線幫助我們直觀地理解電晶體三個工作模式的轉換。圖中 X 軸是 $V_{CE}$，Y 軸是 $I_C$。這條直線由 $V_{CC}$ 和 $R_C$ 決定。
+*   **三個關鍵點**:
+    1.  **截止點 (Cutoff point, 右下角)**: 
+        *   條件: $I_B = 0$ (沒有控制電流)。
+        *   狀態: $I_C = 0$，如同開路，所以所有的電壓都掉在電晶體上，**$V_{CE} = V_{CC}$**。
+    2.  **主動區 (Active region, 線段中間)**:
+        *   條件: $I_B$ 逐漸增加。
+        *   狀態: $I_C$ 成比例增加 ($I_C = \beta_{DC} I_B$)，$V_{CE}$ 隨之下降。
+    3.  **飽和點 (Saturation point, 左上角)**:
+        *   條件: $I_B$ 大到讓 $I_C$ 達到電路的極限。
+        *   狀態: $I_C$ 達到最大值 **$I_{C(sat)}$**，此時 $V_{CE}$ 降到最低的 **$V_{CE(sat)}$** (通常極小，接近 0.2V)。即使再增加 $I_B$，$I_C$ 也不會再增加了。
 
-1. At “Cutoff 截止”, $I_B = 0$, both BE and BC junctions are reverse-biased, acting as an open switch → $V_{CE} = V_{CC}$ and $I_C = 0$.
-2. At between “Active 主動”, as $I_B$ increases, $I_C$ is proportionally increased, while $V_{CE}$ decreases → $V_{CE} \ll V_{CC}$ and $I_C = \beta_{DC} I_B$.
-3. At “Saturation 飽和”, $I_B$ is larger than need for active mode → $V_{CE} = V_{CE(sat)}$ and $I_C = I_{C(sat)}$.
+---
 
-**note：**
-直流負載線 (DC Load Line) 能幫助理解這三種模式的轉換：
-1. 截止：$I_B=0$，$I_C=0$ 且 $V_{CE}=V_{CC}$ (圖中右下角)。
-2. 主動區：$I_B$ 增加帶動 $I_C$ 線性增加，$V_{CE}$ 隨之下降。
-3. 飽和區：$I_B$ 繼續增加時，$I_C$ 達到飽和極限 $I_{C(sat)}$，$V_{CE}$ 降至最低 $V_{CE(sat)}$ (圖中左上角)。
+---
+
+## 🚀 BJT 工作狀態判定全能演算法 (Comprehensive Decision Algorithm)
+
+當你拿到一個 BJT 直流電路圖，要求判定其工作狀態時，請依照下列三個層次進行：
+
+### 🛑 第一層：截止判定 (Cutoff Check) —— 「有沒有推力？」
+*   **檢查輸入端 $V_{IN}$**:
+    *   若 **$V_{IN} < 0.7V$** (例如 $0V$) $\rightarrow$ 電晶體推不動，$BE$ 二極體沒通。
+    *   **結論**: **截止區 (Cutoff)**。
+    *   **特徵**: $I_B = 0, I_C = 0$。
+    *   **輸出電壓**: **$V_{CE} = V_{CC}$** (因為 $R_C$ 上無壓降)。
+
+### 🏃 第二層：理想對決 (The Duel) —— 「理想 vs 現實」
+若 $V_{IN} > 0.7V$，則進入對決階段。
+
+1.  **計算「理想需求」 ($I_{C(ideal)}$)**:
+    假設它是主動區，能發揮最大增益 $\beta$。
+    $$I_B = \frac{V_{IN} - 0.7V}{R_B}$$
+    $$I_{C(ideal)} = \beta_{DC} \times I_B$$
+    *(電晶體「想流過」的電流)*
+
+2.  **計算「現實極限」 ($I_{C(sat)}$)**:
+    外部電路能提供的最大電流限制。
+    $$I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C}$$
+    *(電路「能給出」的最大電流，通常 $V_{CE(sat)} = 0.2V$ 或 $0V$)*
+
+### 🏆 第三層：最終判定 (Final Decision)
+*   **情況 A: 理想 < 現實 ($I_{C(ideal)} < I_{C(sat)}$)**
+    *   電路完全應付得來，電晶體正常發揮。
+    *   **結論**: **主動區 (Active Region)**。
+    *   **特徵**: $I_C = I_{C(ideal)} = \beta I_B$。
+    *   **輸出電壓**: $V_{CE} = V_{CC} - I_C R_C$ (通常大於 $0.7V$)。
+
+*   **情況 B: 理想 > 現實 ($I_{C(ideal)} > I_{C(sat)}$)**
+    *   電晶體想要的比電路能給的多，撞到天花板。
+    *   **結論**: **飽和區 (Saturation Region)**。
+    *   **特徵**: 實際 $I_C = I_{C(sat)}$ (不等於 $\beta I_B$)。
+    *   **輸出電壓**: **$V_{CE} = V_{CE(sat)}$** (通常約 $0.2V$)。
 
 ---
 
 **📄 Slide 18**
+
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 18](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-18.png)
 
