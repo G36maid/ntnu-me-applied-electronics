@@ -19,16 +19,16 @@
 
 * Last chapter discussed the general-purpose diodes.
 * However, there are several other types of diodes that are designed for specific applications, including:
-  1. Zener diodes 稽納二極體
-  2. Light-emitting diodes 發光二極體
-  *(Discussed in this Chapter)*
-  3. Photodiodes 光電二極體
-  4. Varactor diodes 變容二極體
-  5. Laser diodes 雷射二極體
-  6. Schottky diodes 蕭特基二極體
-  *(Read them yourself, if interested)*
-  7. Tunnel diodes 隧道二極體
-  8. Current regulation diodes 穩流二極體
+  * *(Discussed in this Chapter)*
+    * 1. Zener diodes 稽納二極體
+    * 2. Light-emitting diodes 發光二極體
+    * 3. Photodiodes 光電二極體
+    * 4. Varactor diodes 變容二極體
+  * *(Read them yourself, if interested)*
+    * 5. Laser diodes 雷射二極體
+    * 6. Schottky diodes 蕭特基二極體
+    * 7. Tunnel diodes 隧道二極體
+    * 8. Current regulation diodes 穩流二極體
 
 **note：**
 除了前一章介紹的一般用途二極體外，本章節主要介紹針對特定應用設計的特殊二極體。課程重點放在「稽納二極體 (Zener diodes)」與「發光二極體 (LED)」，其他如光電二極體、太陽能電池等也會做概念性介紹。
