@@ -2,6 +2,44 @@
 
 ---
 
+## 🎯 BJT 直流分析解題流程（The Duel Rule）
+
+### Step 1：算 $I_B$
+
+$$I_B = \frac{V_{BB} - V_{BE}}{R_B}$$
+
+- $V_{BE}$ 預設 $0.7V$
+- 若 $V_{BB} < 0.7V$ → **截止區 (Cutoff)**，$I_B = 0,\; I_C = 0,\; V_{CE} = V_{CC}$，直接結束
+
+### Step 2：算「理想需求」$I_{C(ideal)}$
+
+$$I_{C(ideal)} = \beta_{DC} \times I_B$$
+
+### Step 3：算「現實極限」$I_{C(sat)}$
+
+$$I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C}$$
+
+- $V_{CE(sat)} \approx 0.2V$
+
+### Step 4：決鬥判斷（Duel）
+
+| 比較結果 | 區域 | $V_{CE}$ |
+| :--- | :--- | :--- |
+| $I_{C(ideal)} > I_{C(sat)}$ | **飽和區 (Saturation)** ⚡ | $V_{CE} = 0.2V$ |
+| $I_{C(ideal)} < I_{C(sat)}$ | **主動區 (Active)** 📈 | $V_{CE} = V_{CC} - I_C R_C$ |
+
+> 💡 **記憶口訣**：「理想需求 vs 現實極限」。需求超過極限 → 飽和；需求未達極限 → 主動區。
+
+### 變化題型：開關設計（反推 $R_B$）
+
+當題目要求 BJT 飽和導通，反推最大基極電阻：
+
+1. **算 $I_{C(sat)}$**：$\dfrac{V_{CC} - V_{CE(sat)}}{R_C}$
+2. **算 $I_{B(min)}$**：$\dfrac{I_{C(sat)}}{\beta_{DC}}$
+3. **算 $R_{B(max)}$**：$\dfrac{V_{IN} - 0.7V}{I_{B(min)}}$
+
+---
+
 **📄 Slide 01**
 
 ![Ch6_Bipolar_Junction_Transistors_(BJTs) Slide 01](assets/Ch6_Bipolar_Junction_Transistors_(BJTs)/slide-01.png)
