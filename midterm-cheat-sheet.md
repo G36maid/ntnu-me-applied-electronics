@@ -91,3 +91,41 @@
 *   **Voltage Doubler (倍壓器)**: Outputs a DC voltage approximately twice the input peak.
     *   $V_{out} \approx 2 \times V_{p(in)}$
     *   **PIV Requirement**: Each diode must withstand **$2V_{p(in)}$**.
+
+---
+
+## 📌 Ch6: Bipolar Junction Transistors (BJTs)
+
+### 1. Structure & Terminals
+*   **Three Regions**: Emitter (射極, **E**), Base (基極, **B**), Collector (集極, **C**).
+*   **NPN (⭐️ Main)**: Arrow points OUT (Not Pointing iN).
+*   **PNP**: Arrow points IN (Pointing iN).
+
+### 2. Current Relationships (⭐️ Always True)
+*   **Sum of Currents**: $I_E = I_C + I_B$
+*   **Beta (DC Current Gain)**: $\beta_{DC} = \frac{I_C}{I_B}$ (typically $20 \sim 200$)
+*   **Alpha (Transmission Ratio)**: $\alpha_{DC} = \frac{I_C}{I_E}$ (always $< 1$, typically $0.95 \sim 0.99$)
+*   **Conversion**: $\alpha = \frac{\beta}{\beta + 1}$ ; $\beta = \frac{\alpha}{1 - \alpha}$
+
+### 3. DC Circuit Analysis (The "3-Step Analysis")
+1.  **Input Loop (求 $I_B$)**: $I_B = \frac{V_{BB} - 0.7V}{R_B}$
+2.  **Current Gain (求 $I_C$)**: $I_C = \beta_{DC} \times I_B$
+3.  **Output Loop (求 $V_{CE}$)**: $V_{CE} = V_{CC} - I_C R_C$
+*   **Note**: $V_{CB} = V_{CE} - 0.7V$
+
+### 4. Operating Modes & Saturation Duel (⭐️ S.O.P)
+*   **Cutoff (截止)**: $V_{IN} < 0.7V \rightarrow I_C = 0, V_{CE} = V_{CC}$ (OFF state).
+*   **Active (主動)**: $I_C = \beta I_B$, acts as an **Amplifier**.
+*   **Saturation (飽和)**: $V_{CE} \cong 0.2V$ (ON state).
+    *   **Duel Rule**: 
+        1. Calculate $I_{C(ideal)} = \beta I_B$.
+        2. Calculate $I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C}$.
+        3. If **$I_{C(ideal)} > I_{C(sat)}$** $\rightarrow$ **SATURATION**.
+        4. If **$I_{C(ideal)} < I_{C(sat)}$** $\rightarrow$ **ACTIVE**.
+
+### 5. Applications
+*   **Switching**: Operates between **Cutoff** and **Saturation**.
+*   **Amplification**: Operates in **Active** mode.
+    *   **AC Voltage Gain ($A_v$)**: $A_v = \frac{R_C}{r'_e}$, where $r'_e \approx \frac{25mV}{I_E}$.
+    *   $V_{out(ac)} = A_v \times V_{in(ac)}$.
+
