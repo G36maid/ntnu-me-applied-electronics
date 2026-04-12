@@ -12,9 +12,9 @@
 ### 1. 電路路徑與偏壓判定
 ```mermaid
 flowchart LR
-    GND1((Ground 0V)) -->|Anode (+)| D{Diode}
-    D -->|Cathode (-)| V_neg[- 100V +]
-    V_neg --> R[560 Ω Resistor]
+    GND1((Ground 0V)) -- "Anode +" --> D{Diode}
+    D -- "Cathode -" --> V_neg["- 100V +"]
+    V_neg --> R["560 Ω Resistor"]
     R --> GND2((Ground 0V))
 ```
 
@@ -49,9 +49,9 @@ $$V_D = 0.7V + 1.742V = \mathbf{2.442\,V}$$
 ### 1. 電路路徑與偏壓判定
 ```mermaid
 flowchart LR
-    GND1((Ground 0V)) -->|Cathode (-)| D{Diode}
-    D -->|Anode (+)| V_neg[- 100V +]
-    V_neg --> R[560 Ω Resistor]
+    GND1((Ground 0V)) -- "Cathode -" --> D{Diode}
+    D -- "Anode +" --> V_neg["- 100V +"]
+    V_neg --> R["560 Ω Resistor"]
     R --> GND2((Ground 0V))
 ```
 
