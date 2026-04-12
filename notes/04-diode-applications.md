@@ -152,6 +152,12 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 
 ## 練習 (Exercise)
 
+*   **解答 (Solution)**:
+    *   這是一個**半波整流器 (Half-Wave Rectifier)**。
+    *   輸入峰值電壓：$V_{p(in)} = 1.5\text{ V}$。
+    *   輸出波形：只有正半週有波形（且略微變窄），負半週為 $0\text{ V}$。
+    *   輸出峰值電壓：$V_{p(out)} = V_{p(in)} - 0.7\text{ V} = 1.5\text{ V} - 0.7\text{ V} = \mathbf{0.8\text{ V}}$。
+
 *   **題目**：畫出給定輸入電壓下的整流器輸出電壓波形，並計算峰值輸出電壓。
 *   *(給定的輸入電壓為 $V_{in}$，峰值為 $+1.5\text{V}$ 與 $-1.5\text{V}$)*
 
@@ -202,6 +208,9 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 
 *   **全波整流器 (Full-wave rectifier)** 允許電流在輸入週期的完整 $360^\circ$ 期間內通過負載，而**半波整流器 (half-wave rectifier)** 只允許電流在半個週期內通過負載。
 *   **思考**：相對於峰值電壓 $V_p$，全波整流電壓的平均值是多少？
+    *   **解答 (Solution)**: 全波整流因為「填滿」了負半週的空隙，其直流平均值是半波整流的兩倍。
+    *   **公式**: $V_{avg} = \frac{2 V_p}{\pi} \approx 0.636 \times V_p$
+
 
 ---
 
@@ -233,8 +242,13 @@ $$V_{RMS} = \frac{V_p}{2} = 50\% V_p$$
 
 ## 練習 (Exercise)
 
-*   **題目**：畫出負載電阻 $R_L$ 兩端的電壓波形。
-*   **題目**：二極體必須具備的最小 PIV 額定值是多少？
+*   **解答 (Solution)**:
+    1.  **次級峰值電壓**: $V_{p(sec)} = (1/2) \times 100\text{ V} = 50\text{ V}$。
+    2.  **單邊輸入電壓**: $V_{p(in)} = 50\text{ V} / 2 = 25\text{ V}$。
+    3.  **輸出峰值電壓**: $V_{p(out)} = 25\text{ V} - 0.7\text{ V} = \mathbf{24.3\text{ V}}$。
+    4.  **最小 PIV 額定值**: $PIV = 2 V_{p(out)} + 0.7\text{ V} = 2(24.3\text{ V}) + 0.7\text{ V} = \mathbf{49.3\text{ V}}$。
+        *   *(註：PIV 也可以簡單看作次級電壓峰值 $V_{p(sec)}$ 扣除導通的那顆二極體壓降)*
+
 
 ---
 
@@ -384,6 +398,20 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 
 ## 練習 (Exercise)
 
+*   **解答 (Solution)**:
+    這是一個**負向限幅器 (Negative Limiter)**。
+    1.  **正半週分析 (二極體截止)**:
+        *   當輸入為正，二極體逆向偏壓 (OFF)，形同開路。
+        *   電路變成 $R_1$ ($10\text{k}\Omega$) 與 $R_L$ ($100\text{k}\Omega$) 的分壓電路。
+        *   輸出正峰值: $V_{p(out)+} = V_{in(peak)} \times \left( \frac{R_L}{R_1 + R_L} \right) = 10\text{V} \times \left( \frac{100\text{k}}{110\text{k}} \right) = \mathbf{9.09\text{V}}$。
+    2.  **負半週分析 (二極體導通)**:
+        *   當輸入為負，且輸出端試圖低於 $-0.7\text{V}$ 時，二極體順向偏壓 (ON)。
+        *   輸出電壓被二極體的障壁電位箝制。
+        *   輸出負峰值 (截波位準): $\mathbf{-0.7\text{V}}$。
+    3.  **波形繪製**: 
+        *   上半部為峰值 $9.09\text{V}$ 的半個正弦波。
+        *   下半部在 $-0.7\text{V}$ 處被削平。
+
 *   **題目**：畫出負載電阻 $R_L$ 兩端的輸出電壓波形 $V_{out}$。
 *   **題目**：峰值輸出電壓 $V_{p(out)}$ 是多少？
 
@@ -403,12 +431,37 @@ $$V_{r(pp)} \cong \left( \frac{1}{f R_L C} \right) V_{p(rect)}$$
 ## 二極體偏壓限幅器 (Diode Biased Limiters)
 
 *   可以透過與二極體串聯一個**偏壓 (bias voltage, $V_{BIAS}$)**，來調整交流電壓被限制的準位。
+*   **關鍵觀念**: 二極體只有在輸出端電壓達到 $V_{BIAS} + 0.7\text{V}$ (正向) 或 $V_{BIAS} - 0.7\text{V}$ (負向) 時才會導通並限幅。
 
 ---
 
 **📄 Slide 32**
 
 ![Ch4_Diode_Applications Slide 32](assets/Ch4_Diode_Applications/slide-32.png)
+
+*(此投影片展示了不同極性電池與二極體組合的限幅位準對照圖)*
+
+---
+
+**📄 Slide 33**
+
+![Ch4_Diode_Applications Slide 33](assets/Ch4_Diode_Applications/slide-33.png)
+
+## 練習 (Exercise)
+
+*   **解答 (Solution)**:
+    這是一個**雙向偏壓限幅器 (Dual-Biased Limiter)**，同時限制波形的正、負峰值。
+    1.  **正向切除 (D1 與 +5V 電池)**:
+        *   電池正極在上，二極體陽極在上。
+        *   導通門檻: $V_{cut\_pos} = +5\text{V} + 0.7\text{V} = \mathbf{+5.7\text{V}}$。
+        *   輸出電壓最高被限制在 **$+5.7\text{V}$**。
+    2.  **負向切除 (D2 與 +5V 電池反接)**:
+        *   電池正極在下(接地端)，二極體陰極在上。
+        *   導通門檻: $V_{cut\_neg} = -5\text{V} - 0.7\text{V} = \mathbf{-5.7\text{V}}$。
+        *   輸出電壓最低被限制在 **$-5.7\text{V}$**。
+    3.  **輸出波形**: 
+        *   原本 $\pm 10\text{V}$ 的正弦波，在正半週被削平至 $+5.7\text{V}$，在負半週被削平至 $-5.7\text{V}$。
+        *   波形中央（$\pm 5.7\text{V}$ 之間）仍維持正弦波形狀。
 
 ## 二極體偏壓限幅器 (續)
 
