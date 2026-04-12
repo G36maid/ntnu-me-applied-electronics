@@ -52,3 +52,42 @@
 | **Static Resistance ($R_D$)** | 靜態電阻 (DC 電阻) | |
 | **Junction Capacitance** | 接面電容 | |
 | **Rectification** | 整流 | |
+| **Ripple Factor ($r$)** | 漣波因數 | 越低越好 |
+
+---
+
+## 📌 Ch4: Diode Applications (整流與應用)
+
+### 1. Transformer & AC Basics
+*   **Turns Ratio ($n$)**: $n = \frac{N_{sec}}{N_{pri}}$.
+*   **Secondary Voltage**: $V_{sec(p)} = n \times V_{pri(p)}$.
+*   **RMS to Peak**: $V_p = \sqrt{2} \times V_{rms} \approx 1.414 \times V_{rms}$.
+
+### 2. Rectifier Comparison (⭐️ Core Calculation)
+| Rectifier Type | $V_{p(out)}$ (Output Peak) | $V_{avg}$ (DC Value) | PIV (Min. Rating) |
+| :--- | :--- | :--- | :--- |
+| **Half-Wave** | $V_{p(in)} - 0.7V$ | $\frac{V_{p(out)}}{\pi} \approx 0.318 V_{p(out)}$ | $V_{p(in)}$ |
+| **Full-Wave (C.T.)** | $\frac{V_{p(sec)}}{2} - 0.7V$ | $\frac{2V_{p(out)}}{\pi} \approx 0.636 V_{p(out)}$ | $2V_{p(out)} + 0.7V$ |
+| **Full-Wave (Bridge)** | $V_{p(in)} - 1.4V$ | $\frac{2V_{p(out)}}{\pi} \approx 0.636 V_{p(out)}$ | $V_{p(out)} + 0.7V$ |
+
+*   **Full-Wave frequency**: $f_{out} = 2 \times f_{in}$ (漣波頻率是輸入的兩倍).
+
+### 3. Filter & Ripple
+*   **Capacitor-Input Filter**: Smooths the rectified signal.
+*   **Ripple Factor ($r$)**: $r = \frac{V_{r(pp)}}{V_{DC}}$ (漣波電壓 / 直流電壓).
+*   **Effect**: Larger $C$ or larger $R_L$ $\rightarrow$ Smaller Ripple (Better filtering).
+
+### 4. Clippers & Clampers (⭐️ Drawing Questions)
+*   **Clipper (Limiters)**: "Clips" parts of waveform.
+    *   **Diode points DOWN (⬇️)**: Positive Limiter (cuts top).
+        *   Battery (+) up: $V_{limit} = V_{BIAS} + 0.7V$.
+        *   Battery (-) up: $V_{limit} = -V_{BIAS} + 0.7V$.
+    *   **Diode points UP (⬆️)**: Negative Limiter (cuts bottom).
+        *   Battery (-) up: $V_{limit} = -V_{BIAS} - 0.7V$.
+        *   Battery (+) up: $V_{limit} = V_{BIAS} - 0.7V$.
+*   **Clamper**: "Shifts" the entire waveform up or down by a DC level ($V_{p-p}$ remains same).
+
+### 5. Diode Multipliers
+*   **Voltage Doubler (倍壓器)**: Outputs a DC voltage approximately twice the input peak.
+    *   $V_{out} \approx 2 \times V_{p(in)}$
+    *   **PIV Requirement**: Each diode must withstand **$2V_{p(in)}$**.
