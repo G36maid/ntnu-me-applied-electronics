@@ -1,131 +1,86 @@
-# Applied Electronics Midterm Cheat-Sheet (Ch1-Ch3)
-
-## 📌 Ch1 & Ch2: Semiconductor Basics & P-N Junction
-### 1. Atomic Structure & Materials
-*   **Valence Electron (價電子)**: Electrons in the outermost shell; determine electrical properties.
-*   **Silicon (Si, 矽)**: The most common semiconductor; 4 valence electrons.
-*   **Energy Gap (能隙, $E_g$)**: Energy required to move an electron from valence band to conduction band.
-*   **Intrinsic Semiconductor (本徵半導體)**: Pure semiconductor (e.g., pure Si).
-*   **Doping (摻雜)**: Adding impurities to increase conductivity.
-    *   **N-type**: Doped with **Pentavalent** (五價) atoms (e.g., P, As). **Electrons** are majority carriers.
-    *   **P-type**: Doped with **Trivalent** (三價) atoms (e.g., B, Ga). **Holes** are majority carriers.
-
-### 2. The P-N Junction
-*   **Depletion Region (空乏區)**: Region near the junction void of free carriers, formed by recombination.
-*   **Barrier Potential (障壁電位, $V_B$ or $V_\gamma$)**:
-    *   $Si \approx 0.7V$
-    *   $Ge \approx 0.3V$
-*   **Biasing (偏壓)**:
-    *   **Forward Bias (正向偏壓)**: P-side to (+), N-side to (-). Narrowing depletion region, allows current.
-    *   **Reverse Bias (反向偏壓)**: P-side to (-), N-side to (+). Widening depletion region, blocks current.
-*   **Reverse Breakdown (反向崩潰)**: Occurs when reverse voltage exceeds $V_{BR}$. Includes Zener and Avalanche effects.
+# 應用電子學期中考重點筆記 (Applied Electronics Midterm Cheat-Sheet)
+**範圍：Chapters 1 - 6**
 
 ---
 
-## 📌 Ch3: Diode Characteristics & Models
-### 1. Diode Approximation Models (分析電路必用)
-| Model | Forward Condition | Reverse Condition | Use Case |
+## 1. 半導體物理基礎 (Semiconductor Physics Basics)
+*   **本徵半導體 (Intrinsic)**: 純矽，載子來自熱激發。
+*   **雜質半導體 (Extrinsic)**: 摻雜後的半導體。
+    *   **N型 (N-type)**: 摻雜五價元素 (Pentavalent)，多數載子為 **電子 (Electrons)**。
+    *   **P型 (P-type)**: 摻雜三價元素 (Trivalent)，多數載子為 **電洞 (Holes)**。
+*   **PN 接面 (PN Junction)**: 
+    *   **空乏區 (Depletion Region)**: 接面處無載子的區域。
+    *   **障壁電位 (Barrier Potential)**: 矽 (Si) $\approx 0.7V$。
+    *   **順偏 (Forward Bias)**: P接正、N接負 $\rightarrow$ 空乏區縮小。
+    *   **逆偏 (Reverse Bias)**: P接負、N接正 $\rightarrow$ 空乏區擴大。
+
+---
+
+## 2. 二極體模型與整流 (Diode Models & Rectifiers)
+### 二極體模型 (Diode Models)
+1.  **理想模型 (Ideal Model)**: 順偏為短路 ($0V$)，逆偏為斷路。
+2.  **實際模型 (Practical Model)**: 順偏考慮 **$0.7V$ 壓降**，逆偏為斷路。 (**考試最常用**)
+3.  **完整模型 (Complete Model)**: 考慮順向電阻 ($r'_d$)、逆向電阻 ($I_R$) 與接面電容。
+
+### 性能比較表 (Performance Comparison)
+| 特性 (Property) | 半波 (Half-Wave) | 中心抽頭 (Center-Tapped) | 橋式 (Bridge) |
 | :--- | :--- | :--- | :--- |
-| **Ideal Model (理想模型)** | $V_D = 0V$ (Short circuit) | $I_R = 0A$ (Open circuit) | Quick troubleshooting |
-| **Practical Model (實際模型)** | $V_D = 0.7V$ (Voltage source, **+ at Anode**) | $I_R = 0A$ (Open circuit) | Basic circuit analysis |
-| **Complete Model (完整模型)** | $V_D = 0.7V + I_D r'_d$ | $I_R$ (Leakage current) | Precision design |
+| **輸出峰值 ($V_{p(out)}$)** | $V_{p(sec)} - 0.7V$ | $(V_{p(sec)} / 2) - 0.7V$ | $V_{p(sec)} - 1.4V$ |
+| **平均電壓 ($V_{avg}$)** | $V_{p(out)} / \pi$ | $2V_{p(out)} / \pi$ | $2V_{p(out)} / \pi$ |
+| **PIV (逆向耐壓)** | $V_{p(sec)}$ | **$V_{p(sec)} - 0.7V$** | $V_{p(out)} + 0.7V$ |
+| **輸出頻率 ($f_{out}$)** | $f_{in}$ | $2f_{in}$ | $2f_{in}$ |
 
-### 2. Key Formulas
-*   **Forward Current (正向電流)**: 
-    $$I_F = \frac{V_{bias} - V_D}{R_{limit}}$$
-*   **Dynamic Resistance (動態電阻, $r_d$)**:
-    $$r_d = \frac{\Delta V_D}{\Delta I_D} \approx \frac{26mV}{I_D} \text{ (at room temperature)}$$
-*   **Power Dissipation (功率損耗)**:
-    $$P_D = V_D \cdot I_F$$
+*   **關鍵重點**: 
+    *   **降壓變壓器 (Step-down)**: 匝數比 $n = 1:4$ 代表二次側電壓 = 一次側 $\div 4$。
+    *   **漣波因子 (Ripple Factor $r$)**: 負載電阻 $R_L$ 或電容 $C$ 越大 $\rightarrow$ $r$ 越小 (濾波越好)。
 
 ---
 
-## 📖 Professional Terms Dictionary (專業術語對照)
-| English Term | 中文翻譯 | 備註 / 極性 |
-| :--- | :--- | :--- |
-| **Anode** | **陽極** | **(+) P-type** |
-| **Cathode** | **陰極** | **(-) N-type** |
-| **Majority / Minority Carrier** | 多數載子 / 少數載子 | |
-| **Recombination** | 復合 (電子與電洞結合) | |
-| **Leakage Current** | 漏電流 ($I_R$) | |
-| **Peak Inverse Voltage (PIV)** | 峰值反向電壓 | 二極體承受最高逆向電壓 |
-| **Static Resistance ($R_D$)** | 靜態電阻 (DC 電阻) | |
-| **Junction Capacitance** | 接面電容 | |
-| **Rectification** | 整流 | |
-| **Ripple Factor ($r$)** | 漣波因數 | 越低越好 |
+## 3. 波形整形電路 (Waveshaping Circuits)
+### 限幅器 (Clipper / Limiter) - 「切掉部分波形」
+*   **判斷口訣**: 二極體與負載 **並聯**。看二極體箭頭指向。
+    *   **二極體向下 (⬇️)**: 正限幅 (**Positive Clipper**)，切掉上方 (Top)。
+    *   **二極體向上 (⬆️)**: 負限幅 (**Negative Clipper**)，切掉下方 (Bottom)。
+*   **限幅位準 (Clipping Level)**: $V_{bias} \pm 0.7V$ (注意電池極性)。
+
+### 箝位器 (Clamper) - 「平移整體波形」
+*   **判斷口訣**: 二極體與負載 **串聯** (含電容)。看二極體箭頭指向。
+    *   **二極體向上 (⬆️)**: 正箝位 (**Positive Clamper**)，波形往 **上** 移。
+    *   **二極體向下 (⬇️)**: 負箝位 (**Negative Clamper**)，波形往 **下** 移。
+*   **電容電壓 ($V_C$)**: $V_{p(in)} - 0.7V$。
 
 ---
 
-## 📌 Ch4: Diode Applications (整流與應用)
-
-### 1. Transformer & AC Basics
-*   **Turns Ratio ($n$)**: $n = \frac{N_{sec}}{N_{pri}}$.
-*   **Secondary Voltage**: $V_{sec(p)} = n \times V_{pri(p)}$.
-*   **RMS to Peak**: $V_p = \sqrt{2} \times V_{rms} \approx 1.414 \times V_{rms}$.
-
-### 2. Rectifier Comparison (⭐️ Core Calculation)
-| Rectifier Type | $V_{p(out)}$ (Output Peak) | $V_{avg}$ (DC Value) | PIV (Min. Rating) |
-| :--- | :--- | :--- | :--- |
-| **Half-Wave** | $V_{p(in)} - 0.7V$ | $\frac{V_{p(out)}}{\pi} \approx 0.318 V_{p(out)}$ | $V_{p(in)}$ |
-| **Full-Wave (C.T.)** | $\frac{V_{p(sec)}}{2} - 0.7V$ | $\frac{2V_{p(out)}}{\pi} \approx 0.636 V_{p(out)}$ | $2V_{p(out)} + 0.7V$ |
-| **Full-Wave (Bridge)** | $V_{p(in)} - 1.4V$ | $\frac{2V_{p(out)}}{\pi} \approx 0.636 V_{p(out)}$ | $V_{p(out)} + 0.7V$ |
-
-*   **Full-Wave frequency**: $f_{out} = 2 \times f_{in}$ (漣波頻率是輸入的兩倍).
-
-### 3. Filter & Ripple
-*   **Capacitor-Input Filter**: Smooths the rectified signal.
-*   **Ripple Factor ($r$)**: $r = \frac{V_{r(pp)}}{V_{DC}}$ (漣波電壓 / 直流電壓).
-*   **Effect**: Larger $C$ or larger $R_L$ $\rightarrow$ Smaller Ripple (Better filtering).
-
-### 4. Clippers & Clampers (⭐️ Drawing Questions)
-*   **Clipper (Limiters)**: "Clips" parts of waveform.
-    *   **Diode points DOWN (⬇️)**: Positive Limiter (cuts top).
-        *   Battery (+) up: $V_{limit} = V_{BIAS} + 0.7V$.
-        *   Battery (-) up: $V_{limit} = -V_{BIAS} + 0.7V$.
-    *   **Diode points UP (⬆️)**: Negative Limiter (cuts bottom).
-        *   Battery (-) up: $V_{limit} = -V_{BIAS} - 0.7V$.
-        *   Battery (+) up: $V_{limit} = V_{BIAS} - 0.7V$.
-*   **Clamper**: "Shifts" the entire waveform up or down by a DC level ($V_{p-p}$ remains same).
-
-### 5. Diode Multipliers
-*   **Voltage Doubler (倍壓器)**: Outputs a DC voltage approximately twice the input peak.
-    *   $V_{out} \approx 2 \times V_{p(in)}$
-    *   **PIV Requirement**: Each diode must withstand **$2V_{p(in)}$**.
+## 4. 特殊用途二極體 (Special-Purpose Diodes)
+*   **齊納二極體 (Zener Diode)**: 
+    *   運作於 **逆向崩潰區 (Reverse Breakdown)**。
+    *   用途：**電壓調整 (Voltage Regulation)**。
+*   **變容二極體 (Varactor)**: 利用逆向偏壓改變 **電容 (Capacitance)**。
+*   **發光二極體 (LED)**: 運作於 **順向偏壓**。
+*   **光二極體 (Photodiode)**: 運作於 **逆向偏壓**。光強越強 $\rightarrow$ **逆向電流 ($I_{\lambda}$)** 越大。
 
 ---
 
-## 📌 Ch6: Bipolar Junction Transistors (BJTs)
+## 5. BJT 電晶體直流分析 (BJT DC Analysis)
+### 核心公式 (Core Equations)
+*   $I_E = I_C + I_B$
+*   $I_C = \beta_{DC} I_B$
+*   $\alpha_{DC} = \frac{I_C}{I_E} = \frac{\beta}{\beta + 1}$
 
-### 1. Structure & Terminals
-*   **Three Regions**: Emitter (射極, **E**), Base (基極, **B**), Collector (集極, **C**).
-*   **NPN (⭐️ Main)**: Arrow points OUT (Not Pointing iN).
-*   **PNP**: Arrow points IN (Pointing iN).
+### 區域判定演算法 (The "Duel Rule")
+1.  **截止區 (Cutoff)**: 
+    *   條件：$V_{BE} < 0.7V$。
+    *   狀態：$I_B=0, I_C=0, V_{CE} = V_{CC}$。
+2.  **飽和區 (Saturation)**: 
+    *   條件：計算出的「理想需求」$I_{C(ideal)} (\beta I_B) >$ 「現實極限」$I_{C(sat)}$。
+    *   狀態：$I_C = I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C}$，且 $V_{CE} \approx 0.2V$。
+3.  **主動區 (Active)**: 
+    *   條件：$V_{BE} \approx 0.7V$ 且未達飽和。
+    *   狀態：$I_C = \beta I_B$，$V_{CE} = V_{CC} - I_C R_C$。可用於 **放大器 (Amplifier)**。
 
-### 2. Current Relationships (⭐️ Always True)
-*   **Sum of Currents**: $I_E = I_C + I_B$
-*   **Beta (DC Current Gain)**: $\beta_{DC} = \frac{I_C}{I_B}$ (typically $20 \sim 200$)
-*   **Alpha (Transmission Ratio)**: $\alpha_{DC} = \frac{I_C}{I_E}$ (always $< 1$, typically $0.95 \sim 0.99$)
-*   **Conversion**: $\alpha = \frac{\beta}{\beta + 1}$ ; $\beta = \frac{\alpha}{1 - \alpha}$
+---
 
-### 3. DC Circuit Analysis (The "3-Step Analysis")
-1.  **Input Loop (求 $I_B$)**: $I_B = \frac{V_{BB} - 0.7V}{R_B}$
-2.  **Current Gain (求 $I_C$)**: $I_C = \beta_{DC} \times I_B$
-3.  **Output Loop (求 $V_{CE}$)**: $V_{CE} = V_{CC} - I_C R_C$
-*   **Note**: $V_{CB} = V_{CE} - 0.7V$
-
-### 4. Operating Modes & Saturation Duel (⭐️ S.O.P)
-*   **Cutoff (截止)**: $V_{IN} < 0.7V \rightarrow I_C = 0, V_{CE} = V_{CC}$ (OFF state).
-*   **Active (主動)**: $I_C = \beta I_B$, acts as an **Amplifier**.
-*   **Saturation (飽和)**: $V_{CE} \cong 0.2V$ (ON state).
-    *   **Duel Rule**: 
-        1. Calculate $I_{C(ideal)} = \beta I_B$.
-        2. Calculate $I_{C(sat)} = \frac{V_{CC} - V_{CE(sat)}}{R_C}$.
-        3. If **$I_{C(ideal)} > I_{C(sat)}$** $\rightarrow$ **SATURATION**.
-        4. If **$I_{C(ideal)} < I_{C(sat)}$** $\rightarrow$ **ACTIVE**.
-
-### 5. Applications
-*   **Switching**: Operates between **Cutoff** and **Saturation**.
-*   **Amplification**: Operates in **Active** mode.
-    *   **AC Voltage Gain ($A_v$)**: $A_v = \frac{R_C}{r'_e}$, where $r'_e \approx \frac{25mV}{I_E}$.
-    *   $V_{out(ac)} = A_v \times V_{in(ac)}$.
-
+## 🚀 應考重點 (Final Reminders)
+1.  **單位 (Units)**: $mA \times k\Omega = V$。千萬別算錯小數點！
+2.  **有效值 (RMS)**: 看到 $V_{rms}$ 必先乘 $\sqrt{2} \approx 1.414$ 得到 **峰值 (Peak)**。
+3.  **畫圖 (Sketching)**: 輸出波形一定要標出 **峰點 (Peak values)** 的電壓值。
