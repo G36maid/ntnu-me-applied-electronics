@@ -33,7 +33,9 @@ me-applied-electronics/
 │   ├── Ch3_Diodes.pdf
 │   ├── Ch4_Diode_Applications.pdf
 │   ├── Ch5_Special_purpose_Diodes.pdf
-│   └── Ch6_Bipolar_Junction_Transistors_(BJTs).pdf
+│   ├── Ch6_Bipolar_Junction_Transistors_(BJTs).pdf
+│   ├── Ch7_BJT_Amplifiers.pdf
+│   └── Ch8_Field-effect_Transistors_(FETs).pdf
 └── notes/                              # 組織化的筆記
     ├── 01-introduction.md
     ├── 02-semiconductors-and-electronics.md
@@ -41,6 +43,8 @@ me-applied-electronics/
     ├── 04-diode-applications.md
     ├── 05-special-purpose-diodes.md
     ├── 06-bipolar-junction-transistors-(bjts).md
+    ├── 07-bjt-amplifiers.md
+    ├── 08-field-effect-transistors-(fets).md
     └── assets/                         # 投影片圖片資源
 ```
 
@@ -96,6 +100,24 @@ me-applied-electronics/
 - BJT 的偏壓電路
 - BJT 作為開關與放大器
 
+### 第七章：BJT 放大器
+[📖 07-bjt-amplifiers.md](notes/07-bjt-amplifiers.md)
+- BJT 放大器的兩種應用（開關與放大）
+- 電壓分配偏壓 (Voltage-Divider Bias)
+- 直流負載線 (DC Load Line) 與 Q-point
+- 交流訊號的放大與波形失真
+- BJT 放大器的直流與交流分析
+- 二級音頻放大器應用
+
+### 第八章：場效電晶體
+[📖 08-field-effect-transistors-(fets).md](notes/08-field-effect-transistors-(fets).md)
+- BJT 與 FET 的比較
+- JFET 的結構與操作原理
+- MOSFET 的結構與增強模式操作
+- IGBT 的特性與比較
+- H 橋馬達驅動電路
+- 脈波寬度調變 (PWM) 與逆變器應用
+
 ## 課程進度表
 
 | 週次 | 日期 | 主題 | 筆記 |
@@ -104,8 +126,8 @@ me-applied-electronics/
 | 2 | 3/2 | 半導體與電子學 (Semiconductors and electronics) | [02-semiconductors-and-electronics.md](notes/02-semiconductors-and-electronics.md) |
 | 3 | 3/9 | 二極體及其應用 (Diodes and applications) | [03-diodes.md](notes/03-diodes.md) |
 | 4 | 3/16 | 雙極性接面電晶體 (BJTs) | [06-bipolar-junction-transistors-(bjts).md](notes/06-bipolar-junction-transistors-(bjts).md) |
-| 5 | 3/23 | BJT 放大器 (BJT amplifiers) | 待完成 |
-| 6 | 3/30 | 場效電晶體與開關電路 (FETs and switching circuits) | 待完成 |
+| 5 | 3/23 | BJT 放大器 (BJT amplifiers) | [07-bjt-amplifiers.md](notes/07-bjt-amplifiers.md) |
+| 6 | 3/30 | 場效電晶體與開關電路 (FETs and switching circuits) | [08-field-effect-transistors-(fets).md](notes/08-field-effect-transistors-(fets).md) |
 | 7 | 4/6 | 兒童節/清明節（停課） | - |
 | 8 | 4/13 | 期中考 (Midterm exam) | - |
 | 9 | 4/20 | 運算放大器 (Op-Amp) | 待完成 |
