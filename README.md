@@ -35,7 +35,8 @@ me-applied-electronics/
 │   ├── Ch5_Special_purpose_Diodes.pdf
 │   ├── Ch6_Bipolar_Junction_Transistors_(BJTs).pdf
 │   ├── Ch7_BJT_Amplifiers.pdf
-│   └── Ch8_Field-effect_Transistors_(FETs).pdf
+│   ├── Ch8_Field-effect_Transistors_(FETs).pdf
+│   └── Ch9_Operational_Amplifier.pdf
 └── notes/                              # 組織化的筆記
     ├── 01-introduction.md
     ├── 02-semiconductors-and-electronics.md
@@ -45,6 +46,7 @@ me-applied-electronics/
     ├── 06-bipolar-junction-transistors-(bjts).md
     ├── 07-bjt-amplifiers.md
     ├── 08-field-effect-transistors-(fets).md
+    ├── 09-operational-amplifiers.md
     └── assets/                         # 投影片圖片資源
 ```
 
@@ -118,6 +120,18 @@ me-applied-electronics/
 - H 橋馬達驅動電路
 - 脈波寬度調變 (PWM) 與逆變器應用
 
+### 第九章：運算放大器
+[📖 09-operational-amplifiers.md](notes/09-operational-amplifiers.md)
+- 積體電路 (IC) 與離散元件的比較
+- Op-Amp 的符號、封裝與理想/實際模型
+- Op-Amp 的輸入模式（單端差模、雙端差模、共模）
+- 開迴路與閉迴路（負回授）操作
+- 非反相放大器 (Noninverting Amplifier)
+- 電壓隨耦器 (Voltage-Follower / Buffer)
+- 反相放大器 (Inverting Amplifier)
+- 輸入/輸出阻抗分析
+- uA741 資料手冊規格
+
 ## 課程進度表
 
 | 週次 | 日期 | 主題 | 筆記 |
@@ -130,7 +144,7 @@ me-applied-electronics/
 | 6 | 3/30 | 場效電晶體與開關電路 (FETs and switching circuits) | [08-field-effect-transistors-(fets).md](notes/08-field-effect-transistors-(fets).md) |
 | 7 | 4/6 | 兒童節/清明節（停課） | - |
 | 8 | 4/13 | 期中考 (Midterm exam) | - |
-| 9 | 4/20 | 運算放大器 (Op-Amp) | 待完成 |
+| 9 | 4/20 | 運算放大器 (Op-Amp) | [09-operational-amplifiers.md](notes/09-operational-amplifiers.md) |
 | 10 | 4/27 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
 | 11 | 5/4 | 基本運算放大器電路 (Basic Op-Amp circuits) | 待完成 |
 | 12 | 5/11 | 特殊用途運算放大器電路 (Special purpose Op-Amp circuits) | 待完成 |
